@@ -3,7 +3,7 @@
 
 \centering
 \includegraphics{LAB_files/figure-latex/pub-fig-1.pdf}
-\caption{\label{fig:pub-fig}Publication frequency across years.}
+\caption{\label{fig:pub-fig}Overall publication frequency across years.}
 \end{figure*}
 \efloatseparator
  
@@ -25,7 +25,7 @@ quadrant indicates all stimuli above one million.}
 
 \centering
 \includegraphics{LAB_files/figure-latex/tag-fig-1.pdf}
-\caption{\label{fig:tag-fig}Publication frequency across years.}
+\caption{\label{fig:tag-fig}Tag publication frequency across years.}
 \end{figure*}
 \efloatseparator
  

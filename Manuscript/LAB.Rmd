@@ -27,7 +27,7 @@ abstract: |
   
 keywords          : "database, stimuli, online portal, megastudy, trends"
 
-bibliography      : ["lab.bib", "r-references.bib"]
+bibliography      : ["lab-ref.bib", "r-references.bib"]
 
 figsintext        : no
 figurelist        : no
@@ -93,7 +93,7 @@ Each article was coded with the citation information, and a complete list of cit
 
 ### Stimuli Types
 
-While this publication was originally intended for traditional linguistic database norms, other types of experimental stimuli used in concept studies were apparent after background review. Therefore, stimuli were coded based on the dominant description from the article (i.e., although heteronyms are words and word pairs, they were coded specifically as heteronyms). The number of stimuli presented in the appendix or database was coded with the stimuli, unless the article covered specific programs, search or experimental creation tools, which is the majority of the "other" stimuli category. Because many articles included two types of stimuli, or references to different articles where stimuli were selected from, two options for stimuli were included. Therefore, the total values for number of stimuli do not add up to the number of articles in the database because of multiple instances in articles or no stimuli for program descriptions. Table \@ref(tab:stim-table) includes a stimuli list, the number of times that each stimuli was used, percentage of the total stimuli codes, the mean and standard deviation of the number of those stimuli, minimum/maximum values, and a brief variable description. Researchers often cited specific previous works where stimuli were selected from, and these references were included, which can be found in the downloaded data. Table \@ref(tab:stim-table) is included dynamically online under view the variable table and view the frequency table.
+While this publication was originally intended for traditional linguistic database norms, other types of experimental stimuli used in concept studies were apparent after background review. Therefore, stimuli were coded based on the dominant description from the article (i.e., although heteronyms are words and word pairs, they were coded specifically as heteronyms). The number of stimuli presented in the appendix or database was coded with the stimuli, unless the article covered specific programs, search or experimental creation tools, which is the majority of the "other" stimuli category. Because many articles included two types of stimuli, or references to different articles where stimuli were selected from, two options for stimuli were included. Therefore, the total values for number of stimuli do not add up to the number of articles in the database because of multiple instances in articles or no stimuli for program descriptions. Table \@ref(tab:stim-table) includes a stimuli list, the number of times that each stimuli was used, percentage of the total stimuli codes, the mean and standard deviation of the number of those stimuli, minimum, maximum, and a brief variable description. Researchers often cited specific previous works where stimuli were selected from, and these references were included, which can be found in the downloaded data. Table \@ref(tab:stim-table) is included dynamically online under view the variable table and view the frequency table.
 
 ```{r stim-table, echo = FALSE, results = 'asis'}
 #pull the descriptions
@@ -117,8 +117,9 @@ stimwordtable$M = apa(tapply(stimworddata$no1, stimworddata$type1, mean, na.rm =
 stimwordtable$SD = apa(tapply(stimworddata$no1, stimworddata$type1, sd, na.rm = T),2)
 stimwordtable$Percent = apa(table(stimworddata$type1)/sum(table(stimworddata$type1))*100,1)
 
-stimwordtable[ , c("Stimuli","Description","N","Percent",
+stimewordtable = stimwordtable[ , c("Stimuli","Description","N","Percent",
                    "Minimum","Maximum","M","SD")]
+
 apa_table(stimwordtable,
           align = c("l", "l", rep("c", 6)), 
           caption = "Stimuli Definitions and Descriptive Statistics")
@@ -214,7 +215,7 @@ Journal results, unsurprisingly, show that the wealth of data was published in *
 
 Figure \@ref(fig:pub-fig) portrays the number of publications across years, and there has been a clear expansion of database and program papers, as part of the growth in big data. Interestingly, a first growth of publications tracks with the 1950s cognitive revolution [@Miller2003], but an odd decline in publications occurred from the 1970s to 1990s. The last twenty years has shown unbelievable progress in this area, at over `r sum(as.numeric(na.omit(master$year >= 2010)))` publications since 2010 alone. This chart can be found in greater detail online, under the Papers Per Year link, showing the ups and downs of publications by year in a larger format with the ability to control year and bin width. For example, 2004, 2010, 2013-2015, and 2017 were big years for linguistic publications, each with 30 or more publications. Even with these fluctuations, a clear growth curve in publications can be found since the 90s.
 
-```{r pub-fig, echo=FALSE, fig.cap="Publication frequency across years.", fig.height=6, fig.width=6}
+```{r pub-fig, echo=FALSE, fig.cap="Overall publication frequency across years.", fig.height=6, fig.width=6}
 yearhist = ggplot(master, aes(year))
     yearhist +
     geom_histogram(binwidth = 3, 
@@ -300,7 +301,7 @@ The variety and number of languages for stimuli provided an encouraging picture 
 
 ### Tags
 
-```{r tag-fig, echo=FALSE, fig.cap="Publication frequency across years.", fig.height=6, fig.width=6}
+```{r tag-fig, echo=FALSE, fig.cap="Tag publication frequency across years.", fig.height=6, fig.width=6}
 master$totaltag = apply(master[ , 22:67], 1, sum, na.rm = T)
 
 taggraph = ggplot(master, aes(year, totaltag)) + 
@@ -312,7 +313,7 @@ taggraph = ggplot(master, aes(year, totaltag)) +
 taggraph
 ```
 
-Table \@ref(tab:tag-table) displays the number, percentages, correlations of tags across year, and descriptions of tags. Undoubtedly, these tags represent changes in terminology over time, and some could be combined or recoined. However, even if low frequency (*N* < 10; nine tags) tags were excluded, thirty-seven different tags were used to describe the types of psycholinguistic data. Many of these tags can be considered individual research areas, and the sizeable number of different options indicates how complex and diverse the field has become since the publication of free association norms in 1910 (@Kent & Rosanoff association norms).
+Table \@ref(tab:tag-table) displays the number, percentages, correlations of tags across year, and descriptions of tags. Undoubtedly, these tags represent changes in terminology over time, and some could be combined or recoined. However, even if low frequency (*N* < 10; nine tags) tags were excluded, thirty-seven different tags were used to describe the types of psycholinguistic data. Many of these tags can be considered individual research areas, and the sizeable number of different options indicates how complex and diverse the field has become since the publication of free association norms in 1910 [@Kent1910].
 
 The total number of tags for each publication was then tallied, and this data was plotted in Figure \@ref(tab:tag-fig) to visualize if the number of variables included in a study has grown over time (*M* = `r apa(mean(master$totaltag), 2)`, *SD* = `r apa(sd(master$totaltag),2)`). The correlation between total tags and year was `rapa_print(cor.test(master$totaltag, master$year, use = "pairwise.complete.obs"))$full_result`, indicating a small increase in total tags used over time. Even considering the larger number of publications in the 2000s versus 1950s to 1970s, it appeared that the number of keywords for articles was also slowly growing over time. This trend may indicate the evolution in computing possibilities to be able to publish large amounts of data, but also may indicate a desire to combine datasets so that even more stimuli may be considered at once for modeling or experiment creation.
 
@@ -327,9 +328,6 @@ In the introduction, we provided two examples of current megastudies (SUBTLEX an
 \newpage
 
 # References
-```{r create_r-references}
-r_refs(file = "r-references.bib")
-```
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}

@@ -274,8 +274,8 @@ sourcing avenue that allows researchers to pay users to complete
 questionnaires, has shown to be a reliable, diverse participant pool
 made available at very low cost (Buhrmester et al., 2011; Mason \& Suri,
 2012). Researchers can pre-screen for specific populations, as well as
-post-screen surveys for incomplete or inappropriate responses
-({\textbf{???}}), thus saving time and money with the elimination of
+post-screen surveys for incomplete or inappropriate responses (Buchanan
+\& Scofield, 2018), thus saving time and money with the elimination of
 poor data. Because of the popularity of Mechanical Turk, large amounts
 of data can be collected in shorter time periods than traditional
 experiments. Mechanical Turk has been used to collect data for semantic
@@ -313,29 +313,32 @@ within cogntive psychology.
 
 \section{Website}\label{website}
 
-Readers can find the website by going to \url{http://www.wordnorms.com},
-and the source files can be found at
-\url{https://github.com/doomlab/wordnorms}. From this page, the top
+This manuscript was written with \emph{R} markdown and Aust and Barth
+(2017) and can be found at \url{https://osf.io/9bcws/}. Readers can find
+the website by going to \url{http://www.wordnorms.com}, and the source
+files for the website can be found at
+\url{https://github.com/doomlab/wordnorms}. From the webpage, the top
 navigation bar includes a link to direct the reader to the LAB page. On
 the LAB page, we have included a purpose statement and several summary
 options. First, the variable tables include summary descriptions about
 the stimuli and keyword (tags) variables in this study. The links
 redirect to Shiny applications. Shiny is an open source graphical user
 interface \emph{R} package that allows researchers to build interactive
-web applications ({\textbf{???}}). These apps connect to the LAB
-database and display the current \emph{N}, minimum, maximum, mean and
-standard deviation for each variable, when appropriate. The advantage to
-using Shiny apps is dynamic updating of the database, so as new
-information is added, the app will display the most current statistics.
-Viewers can suggest articles that should be included in the dataset by
-using the email link included on the website. The entire dataset can be
-viewed and filtered based on keyword, language, and stimuli type. This
-search app allows for multiple filter options, so a person may drill
-down into very specific search criteria. Underneath the search
-functions, yearly trend visualization and descriptive statistics may be
-found including frequency tables of stimuli and keywords. Finally, the
-complete database in csv format can be downloaded. Specific features
-will be outlined below in relation to the database creation.
+web applications (Chang, Cheng, Allaire, Xie, \& McPherson, 2017). These
+apps connect to the LAB database and display the current \emph{N},
+minimum, maximum, mean and standard deviation for each variable, when
+appropriate. The advantage to using Shiny apps is dynamic updating of
+the database, so as new information is added, the app will display the
+most current statistics. Viewers can suggest articles that should be
+included in the dataset by using the email link included on the website.
+The entire dataset can be viewed and filtered based on keyword,
+language, and stimuli type. This search app allows for multiple filter
+options, so a person may drill down into very specific search criteria.
+Underneath the search functions, yearly trend visualization and
+descriptive statistics may be found including frequency tables of
+stimuli and keywords. Finally, the complete database in csv format can
+be downloaded. Specific features will be outlined below in relation to
+the database creation.
 
 \section{Database Methods}\label{database-methods}
 
@@ -418,62 +421,12 @@ up to the number of articles in the database because of multiple
 instances in articles or no stimuli for program descriptions. Table
 \ref{tab:stim-table} includes a stimuli list, the number of times that
 each stimuli was used, percentage of the total stimuli codes, the mean
-and standard deviation of the number of those stimuli, minimum/maximum
-values, and a brief variable description. Researchers often cited
-specific previous works where stimuli were selected from, and these
-references were included, which can be found in the downloaded data.
-Table \ref{tab:stim-table} is included dynamically online under view the
+and standard deviation of the number of those stimuli, minimum, maximum,
+and a brief variable description. Researchers often cited specific
+previous works where stimuli were selected from, and these references
+were included, which can be found in the downloaded data. Table
+\ref{tab:stim-table} is included dynamically online under view the
 variable table and view the frequency table.
-
-\begin{verbatim}
-         Stimuli
-\end{verbatim}
-
-1 Anagrams 2 Categories 3 Characters 4 Cloze/Sentences 5 Color drawings
-6 Homo/Heterographs 7 Homo/Heteronyms 8 Homo/Heterophones 9 Letters 10
-Line drawings 11 Names 12 Other 13 Phonemes 14 Pictures 15 Pseudowords
-16 Sounds 17 Syllables 18 Symbols/Icons 19 Word Pairs 20 Words
-Description 1 Words whose letters can be rearranged into other real
-words. 2 Lists of words that are associated with particular category
-names, such as animals 3 Characters are non-Roman letters, usually
-Japanese or Chinese logographs. 4 Sentence norms are complete or partial
-sentences in structure. Cloze norms are sentences with a missing word,
-and probabilities of different words to complete that blank are
-provided.. 5 Line drawings or similar non-picture images that are
-colored. 6 Homographs are two words with the same spelling, often with
-different pronunciations, and different meanings (bow), while
-heterographs have different spellings and meanings (to, two). 7 Homonyms
-have the same spelling and pronunciation, but have different meanings
-(bank), while heteronyms have the same spelling with different
-pronunciations and meanings (desert). 8 Homophones have the same
-pronunciation but different meanings (rose), while heterophones are
-often considered heteronyms with the same spelling but different
-pronunciations and meanings. 9 Alphabetic written elements. 10 A
-non-picture image that is not colored. 11 Words that are traditionally
-considered first or last names, such as Bob and Smith. 12 This category
-was used for stimuli that did not fit into others, programs or
-experimental stimuli creation tools, and each is described in the online
-table with that particular row in stimuli notes. 13 A basic unit of
-sound in a language wherein changes bring changes to a word's meaning.
-14 Photographs or other complex images. 15 Non-real words that are often
-created by changing one letter of a real word to create a linguistically
-valid consonant-vowel combination (wug). 16 Clips of noises, speech, or
-songs. 17 A unit of pronunciation with at least one vowel, dipthong, or
-consonant. 18 Non-word characters. 19 Words that were specifically
-paired for study in the article, such as studies on priming or word
-association. 20 A distinct meaningful element of speech or writing. N
-Percent Minimum Maximum M SD 1 6 0.8 80.00 3.8e+02 229.00 2.1e+02 2 31
-4.0 4.00 2.4e+02 43.41 4.7e+01 3 21 2.7 48.00 4.7e+07 2480334.00 1.1e+07
-4 35 4.5 5.00 2.0e+03 353.66 3.8e+02 5 9 1.2 200.00 7.4e+02 384.00
-2.1e+02 6 10 1.3 20.00 5.7e+02 161.44 1.8e+02 7 5 0.6 114.00 5.8e+02
-343.75 2.5e+02 8 3 0.4 40.00 2.1e+02 148.00 9.4e+01 9 56 7.2 9.00
-8.8e+03 679.08 1.6e+03 10 42 5.4 22.00 5.2e+02 243.83 1.3e+02 11 7 0.9
-126.00 1.0e+04 2644.17 4.1e+03 12 50 6.5 1.00 3.1e+03 720.89 9.2e+02 13
-4 0.5 10000.00 1.0e+04 10000.00 NA 14 62 8.0 2.00 2.9e+03 417.45 4.7e+02
-15 12 1.5 30.00 4.0e+04 12887.78 1.6e+04 16 8 1.0 22.00 1.7e+02 117.00
-4.9e+01 17 9 1.2 33.00 1.4e+05 18129.00 4.9e+04 18 5 0.6 68.00 6.0e+02
-308.75 2.2e+02 19 28 3.6 40.00 7.2e+04 8076.83 2.1e+04 20 372 48.0 10.00
-5.9e+08 6964032.05 4.6e+07
 
 \begin{table}[tbp]
 \begin{center}
@@ -495,7 +448,7 @@ Letters & Alphabetic written elements. & 56.00 & \ \ \ \ 9.00 & 8.8e+03 & \ \ \ 
 Line drawings & A non-picture image that is not colored. & 42.00 & \ \  22.00 & 5.2e+02 & \ \ \ \ 243.83 & 1.3e+02 & 5.4\\
 Names & Words that are traditionally considered first or last names, such as Bob and Smith. & 7.00 & \ \ 126.00 & 1.0e+04 & \ \  2644.17 & 4.1e+03 & 0.9\\
 Other & This category was used for stimuli that did not fit into others, programs or experimental stimuli creation tools, and each is described in the online table with that particular row in stimuli notes. & 50.00 & \ \ \ \ 1.00 & 3.1e+03 & \ \ \ \ 720.89 & 9.2e+02 & 6.5\\
-Phonemes & A basic unit of sound in a language wherein changes bring changes to a word’s meaning. & 4.00 & 10000.00 & 1.0e+04 & \ \ 10000.00 & \ \ \ \  NA & 0.5\\
+Phonemes & A basic unit of sound in a language wherein changes bring changes to a word's meaning. & 4.00 & 10000.00 & 1.0e+04 & \ \ 10000.00 & \ \ \ \  NA & 0.5\\
 Pictures & Photographs or other complex images. & 62.00 & \ \ \ \ 2.00 & 2.9e+03 & \ \ \ \ 417.45 & 4.7e+02 & 8.0\\
 Pseudowords & Non-real words that are often created by changing one letter of a real word to create a linguistically valid consonant-vowel combination (wug). & 12.00 & \ \  30.00 & 4.0e+04 & \ \ 12887.78 & 1.6e+04 & 1.5\\
 Sounds & Clips of noises, speech, or songs. & 8.00 & \ \  22.00 & 1.7e+02 & \ \ \ \ 117.00 & 4.9e+01 & 1.0\\
@@ -595,36 +548,36 @@ specificity, and they can be used in future additions.
 \toprule
 Stimuli & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Percent} & \multicolumn{1}{c}{r}\\
 \midrule
-Age of Acquisition & Estimated age of first learning for a concept. & 100.00 & 5.3 & .174\\
-Ambiguity/Word Meaning & Estimates of ambiguity for a concept or information about different word meanings (i.e. number of meanings). & 31.00 & 1.6 & -.054\\
-Arousal & Estimates of strength of response to a concept. & 54.00 & 2.8 & .196\\
+Age of Acquisition & Estimated age of first learning for a concept. & 100.00 & 5.3 & .173\\
+Ambiguity/Word Meaning & Estimates of ambiguity for a concept or information about different word meanings (i.e. number of meanings). & 31.00 & 1.6 & -.055\\
+Arousal & Estimates of strength of response to a concept. & 54.00 & 2.8 & .195\\
 Association & Estimates of the relationship between concepts that are used together, often in free association format (i.e. the first word that pops to mind after a cue word has been listed). & 85.00 & 4.5 & -.322\\
 Category & Information related to lists of words all related to one cue word, such as bird, plant, animal. & 44.00 & 2.3 & -.041\\
 Cloze Probabilities & The probability of an individual word completing a specific spot in a sentence. & 6.00 & 0.3 & .008\\
 Complexity & Estimates of the intricacy or complicatedness of a concept. & 18.00 & 0.9 & .069\\
 Concreteness & Estimates of the non-abstractness of a concept, sometimes described as how touchable a concept is. & 67.00 & 3.5 & .015\\
 Confusion Matrices & Probabilities of distinctiveness between pairs of concepts, or the likelihood those two concepts will be confused with each other (usually letters). & 18.00 & 0.9 & -.187\\
-Distinctiveness & Estimates of how different, unique a concept seemed. & 10.00 & 0.5 & -.000\\
-Dominance & Estimates of how important or powerful a concept seemed. & 32.00 & 1.7 & .070\\
+Distinctiveness & Estimates of how different, unique a concept seemed. & 10.00 & 0.5 & -.001\\
+Dominance & Estimates of how important or powerful a concept seemed. & 32.00 & 1.7 & .069\\
 Ease of Learning & Estimates of how difficult a concept was to remember. & 5.00 & 0.3 & -.100\\
 Familiarity & Estimates of how well known a concept seemed. & 132.00 & 6.9 & .164\\
 Frequency & The rates of occurrence for concepts. & 227.00 & 11.9 & .033\\
 Grapheme-Phoneme Correspondence & The relationship between written and spoken symbols. & 18.00 & 0.9 & -.008\\
 Identification & Estimates of the likelihood of remembering concepts. & 16.00 & 0.8 & .052\\
 Identification - Lexical Decision & Participant response times to real and pseudowords in a yes/no decision task. & 12.00 & 0.6 & .084\\
-Identification - Naming & Participant response times to reading aloud real and pseudowords. & 48.00 & 2.5 & .130\\
-Image Agreement & Estimates of the similarity between images. & 20.00 & 1.1 & .077\\
+Identification - Naming & Participant response times to reading aloud real and pseudowords. & 48.00 & 2.5 & .129\\
+Image Agreement & Estimates of the similarity between images. & 20.00 & 1.1 & .076\\
 Image Variability & Estimates of the complexity of images. & 5.00 & 0.3 & .041\\
-Imageability & Estimates of how easy or difficulty a concept is to imagine. & 96.00 & 5.1 & .078\\
+Imageability & Estimates of how easy or difficulty a concept is to imagine. & 96.00 & 5.1 & .077\\
 Intensity & Estimates of the strength of a concept or how intense the concept seems. & 6.00 & 0.3 & .077\\
 Letters & Alphabetic characters. & 62.00 & 3.3 & .095\\
 Meaningfulness & Estimates of how meaningful or significant a concept seems. & 47.00 & 2.5 & -.149\\
 Modality & The different ways or modes that something can be experiences (i.e. perceptual, tactile). & 5.00 & 0.3 & .046\\
-Morphology & The structure of a concept’s morphemes. & 11.00 & 0.6 & .100\\
-Name Agreement & Estimates of the similarity between concepts. & 42.00 & 2.2 & .104\\
+Morphology & The structure of a concept's morphemes. & 11.00 & 0.6 & .100\\
+Name Agreement & Estimates of the similarity between concepts. & 42.00 & 2.2 & .103\\
 Orthographic Neighborhood & The number of concepts that differ by one letter. & 50.00 & 2.6 & .129\\
-Part of Speech & Type of speech for a concept (i.e. verbs, nouns). & 59.00 & 3.1 & .117\\
-Phonemes & A basic unit of sound in a language wherein changes bring changes to a word’s meaning. & 45.00 & 2.4 & .115\\
+Part of Speech & Type of speech for a concept (i.e. verbs, nouns). & 59.00 & 3.1 & .116\\
+Phonemes & A basic unit of sound in a language wherein changes bring changes to a word's meaning. & 45.00 & 2.4 & .115\\
 Phonological Neighborhood & The number of concepts that differ by one phoneme. & 34.00 & 1.8 & .128\\
 Priming & The advantage in processing a concept receives when shown together with a related concept. & 6.00 & 0.3 & .039\\
 Pronunciation & The way in which a concept is spoken. & 16.00 & 0.8 & -.173\\
@@ -635,11 +588,11 @@ Rime & Concepts that have corresponding sounds. & 5.00 & 0.3 & -.000\\
 Semantics & Estimates of relationships between word pairs based on definition and meaning. & 92.00 & 4.8 & .073\\
 Sensory/Motor & Studies that used different sensory mechanisms (tactile or visually presented) or had ratings of actions/animation of concepts. & 34.00 & 1.8 & .077\\
 Sentence Completion & Estimates of common conceptions that would complete a blank in sentence. & 6.00 & 0.3 & -.011\\
-Similarity & Estimations of the likeness or sameness between two concepts. & 20.00 & 1.1 & .069\\
+Similarity & Estimations of the likeness or sameness between two concepts. & 20.00 & 1.1 & .068\\
 Syllables & A unit of pronunciation with at least one vowel, dipthong, or consonant. & 57.00 & 3.0 & .173\\
 Typicality & Estimates of how common or normal a feature is for a concept. & 25.00 & 1.3 & .028\\
 Valence/Emotion & Estimates of the strength of emotions or feelings for concepts. & 89.00 & 4.7 & .152\\
-Visual Complexity & Estimates of the intricacy or complicatedness of a picture. & 36.00 & 1.9 & .105\\
+Visual Complexity & Estimates of the intricacy or complicatedness of a picture. & 36.00 & 1.9 & .104\\
 Word Completion & Estimates of likelihoods of letter combinations that would complete a word. & 9.00 & 0.5 & -.031\\
 \bottomrule
 \end{tabular}
@@ -697,7 +650,7 @@ papers, as part of the growth in big data. Interestingly, a first growth
 of publications tracks with the 1950s cognitive revolution (Miller,
 2003), but an odd decline in publications occurred from the 1970s to
 1990s. The last twenty years has shown unbelievable progress in this
-area, at over 259 publications since 2010 alone. This chart can be found
+area, at over 260 publications since 2010 alone. This chart can be found
 in greater detail online, under the Papers Per Year link, showing the
 ups and downs of publications by year in a larger format with the
 ability to control year and bin width. For example, 2004, 2010,
@@ -705,14 +658,10 @@ ability to control year and bin width. For example, 2004, 2010,
 with 30 or more publications. Even with these fluctuations, a clear
 growth curve in publications can be found since the 90s.
 
-\begin{verbatim}
-## Warning: Removed 1 rows containing non-finite values (stat_bin).
-\end{verbatim}
-
 \begin{figure}
 \centering
 \includegraphics{LAB_files/figure-latex/pub-fig-1.pdf}
-\caption{\label{fig:pub-fig}Publication frequency across years.}
+\caption{\label{fig:pub-fig}Overall publication frequency across years.}
 \end{figure}
 
 \subsubsection{Stimuli}\label{stimuli}
@@ -769,18 +718,14 @@ majority of publications (56.7) and were published across all years
 present in this data. Of the 283 non-English publications, 37 included
 multiple langauges, and 21 of these were published after 2010.
 Additionally, the last ten years (2008 and later) have seen an explosion
-of publications in non-English languages, 185, with 21 in 2017 alone.
+of publications in non-English languages, 186, with 21 in 2017 alone.
 
 \subsubsection{Tags}\label{tags}
-
-\begin{verbatim}
-## Warning: Removed 1 rows containing missing values (geom_point).
-\end{verbatim}
 
 \begin{figure}
 \centering
 \includegraphics{LAB_files/figure-latex/tag-fig-1.pdf}
-\caption{\label{fig:tag-fig}Publication frequency across years.}
+\caption{\label{fig:tag-fig}Tag publication frequency across years.}
 \end{figure}
 
 Table \ref{tab:tag-table} displays the number, percentages, correlations
@@ -791,8 +736,8 @@ nine tags) tags were excluded, thirty-seven different tags were used to
 describe the types of psycholinguistic data. Many of these tags can be
 considered individual research areas, and the sizeable number of
 different options indicates how complex and diverse the field has become
-since the publication of free association norms in 1910
-(({\textbf{???}}) \& Rosanoff association norms).
+since the publication of free association norms in 1910 (Kent \&
+Rosanoff, 1910).
 
 The total number of tags for each publication was then tallied, and this
 data was plotted in Figure \ref{tab:tag-fig} to visualize if the number
@@ -883,6 +828,10 @@ Diversity Not Word Frequency Determines Time To Read. \emph{Psychology},
 \emph{17}(Cd), 814--823. Retrieved from
 \url{http://pss.sagepub.com/content/17/9/814.short}
 
+\hypertarget{ref-R-papaja}{}
+Aust, F., \& Barth, M. (2017). \emph{papaja: Create APA manuscripts with
+R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
+
 \hypertarget{ref-Baayen}{}
 Baayen, R. H., Piepenbrock, R., Gulikers, L., \& Linguistic Data
 Consortium. (n.d.). The CELEX Lexical Database (CD-ROM). Philadelphia,
@@ -946,6 +895,12 @@ ratings for 40 thousand generally known English word lemmas.
 \emph{Behavior Research Methods}, \emph{46}(3), 904--911.
 doi:\href{https://doi.org/10.3758/s13428-013-0403-5}{10.3758/s13428-013-0403-5}
 
+\hypertarget{ref-Buchanan2018}{}
+Buchanan, E. M., \& Scofield, J. E. (2018). Methods to detect low
+quality data and its implication for psychological research.
+\emph{Behavior Research Methods}.
+doi:\href{https://doi.org/10.3758/s13428-018-1035-6}{10.3758/s13428-018-1035-6}
+
 \hypertarget{ref-Buchanan2013}{}
 Buchanan, E. M., Holmes, J. L., Teasley, M. L., \& Hutchison, K. A.
 (2013). English semantic word-pair norms and a searchable Web portal for
@@ -969,6 +924,11 @@ doi:\href{https://doi.org/10.3758/BF03200655}{10.3758/BF03200655}
 Cai, Q., \& Brysbaert, M. (2010). SUBTLEX-CH: Chinese word and character
 frequencies based on film subtitles. \emph{PLoS ONE}, \emph{5}(6).
 doi:\href{https://doi.org/10.1371/journal.pone.0010729}{10.1371/journal.pone.0010729}
+
+\hypertarget{ref-R-shiny}{}
+Chang, W., Cheng, J., Allaire, J., Xie, Y., \& McPherson, J. (2017).
+\emph{Shiny: Web application framework for r}. Retrieved from
+\url{https://CRAN.R-project.org/package=shiny}
 
 \hypertarget{ref-Cohen-Shikora2013}{}
 Cohen-Shikora, E. R., Balota, D. A., Kapuria, A., \& Yap, M. J. (2013).
@@ -1049,6 +1009,12 @@ Jasmin, K., \& Casasanto, D. (2012). The QWERTY Effect: How typing
 shapes the meanings of words. \emph{Psychonomic Bulletin \& Review},
 \emph{19}(3), 499--504.
 doi:\href{https://doi.org/10.3758/s13423-012-0229-7}{10.3758/s13423-012-0229-7}
+
+\hypertarget{ref-Kent1910}{}
+Kent, G. H., \& Rosanoff, A. J. (1910). A study of association in
+insanity. \emph{The American Journal of Psychiatry}, \emph{67},
+317--390.
+doi:\href{https://doi.org/10.1037/13767-000}{10.1037/13767-000}
 
 \hypertarget{ref-Keuleers2010}{}
 Keuleers, E., Brysbaert, M., \& New, B. (2010). SUBTLEX-NL: A new
