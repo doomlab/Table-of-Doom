@@ -1,0 +1,130 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:stim-table}Stimuli Definitions and Descriptive Statistics}
+\begin{tabular}{llcccccc}
+\toprule
+Stimuli & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Minimum} & \multicolumn{1}{c}{Maximum} & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Percent}\\
+\midrule
+Anagrams & Words whose letters can be rearranged into other real words. & 6.00 & \ \  80.00 & 3.8e+02 & \ \ \ \ 229.00 & 2.1e+02 & 0.8\\
+Categories & Lists of words that are associated with particular category names, such as animals & 31.00 & \ \ \ \ 4.00 & 2.4e+02 & \ \ \ \  43.41 & 4.7e+01 & 4.0\\
+Characters & Characters are non-Roman letters, usually Japanese or Chinese logographs. & 21.00 & \ \  48.00 & 4.7e+07 & 2480334.00 & 1.1e+07 & 2.7\\
+Cloze/Sentences & Sentence norms are complete or partial sentences in structure. Cloze norms are sentences with a missing word, and probabilities of different words to complete that blank are provided.. & 35.00 & \ \ \ \ 5.00 & 2.0e+03 & \ \ \ \ 353.66 & 3.8e+02 & 4.5\\
+Color drawings & Line drawings or similar non-picture images that are colored. & 9.00 & \ \ 200.00 & 7.4e+02 & \ \ \ \ 384.00 & 2.1e+02 & 1.2\\
+Homo/Heterographs & Homographs are two words with the same spelling, often with different pronunciations, and different meanings (bow), while heterographs have different spellings and meanings (to, two). & 10.00 & \ \  20.00 & 5.7e+02 & \ \ \ \ 161.44 & 1.8e+02 & 1.3\\
+Homo/Heteronyms & Homonyms have the same spelling and pronunciation, but have different meanings (bank), while heteronyms have the same spelling with different pronunciations and meanings (desert). & 5.00 & \ \ 114.00 & 5.8e+02 & \ \ \ \ 343.75 & 2.5e+02 & 0.6\\
+Homo/Heterophones & Homophones have the same pronunciation but different meanings (rose), while heterophones are often considered heteronyms with the same spelling but different pronunciations and meanings. & 3.00 & \ \  40.00 & 2.1e+02 & \ \ \ \ 148.00 & 9.4e+01 & 0.4\\
+Letters & Alphabetic written elements. & 56.00 & \ \ \ \ 9.00 & 8.8e+03 & \ \ \ \ 679.08 & 1.6e+03 & 7.2\\
+Line drawings & A non-picture image that is not colored. & 42.00 & \ \  22.00 & 5.2e+02 & \ \ \ \ 243.83 & 1.3e+02 & 5.4\\
+Names & Words that are traditionally considered first or last names, such as Bob and Smith. & 7.00 & \ \ 126.00 & 1.0e+04 & \ \  2644.17 & 4.1e+03 & 0.9\\
+Other & This category was used for stimuli that did not fit into others, programs or experimental stimuli creation tools, and each is described in the online table with that particular row in stimuli notes. & 50.00 & \ \ \ \ 1.00 & 3.1e+03 & \ \ \ \ 720.89 & 9.2e+02 & 6.5\\
+Phonemes & A basic unit of sound in a language wherein changes bring changes to a word\T1\textquoteright s meaning. & 4.00 & 10000.00 & 1.0e+04 & \ \ 10000.00 & \ \ \ \  NA & 0.5\\
+Pictures & Photographs or other complex images. & 62.00 & \ \ \ \ 2.00 & 2.9e+03 & \ \ \ \ 417.45 & 4.7e+02 & 8.0\\
+Pseudowords & Non-real words that are often created by changing one letter of a real word to create a linguistically valid consonant-vowel combination (wug). & 12.00 & \ \  30.00 & 4.0e+04 & \ \ 12887.78 & 1.6e+04 & 1.5\\
+Sounds & Clips of noises, speech, or songs. & 8.00 & \ \  22.00 & 1.7e+02 & \ \ \ \ 117.00 & 4.9e+01 & 1.0\\
+Syllables & A unit of pronunciation with at least one vowel, dipthong, or consonant. & 9.00 & \ \  33.00 & 1.4e+05 & \ \ 18129.00 & 4.9e+04 & 1.2\\
+Symbols/Icons & Non-word characters. & 5.00 & \ \  68.00 & 6.0e+02 & \ \ \ \ 308.75 & 2.2e+02 & 0.6\\
+Word Pairs & Words that were specifically paired for study in the article, such as studies on priming or word association. & 28.00 & \ \  40.00 & 7.2e+04 & \ \  8076.83 & 2.1e+04 & 3.6\\
+Words & A distinct meaningful element of speech or writing. & 372.00 & \ \  10.00 & 5.9e+08 & 6964032.05 & 4.6e+07 & 48.0\\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:lang-table}Language Descriptive Statistics}
+\begin{tabular}{lcc}
+\toprule
+Language & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Percent}\\
+\midrule
+British English & 23.00 & 3.3\\
+Chinese & 25.00 & 3.5\\
+Dutch & 14.00 & 2.0\\
+English & 400.00 & 56.7\\
+French & 40.00 & 5.7\\
+German & 30.00 & 4.2\\
+Greek & 5.00 & 0.7\\
+Italian & 19.00 & 2.7\\
+Japanese & 12.00 & 1.7\\
+Multiple & 37.00 & 5.2\\
+Other & 32.00 & 4.5\\
+Portuguese & 15.00 & 2.1\\
+Spanish & 54.00 & 7.6\\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+\begin{center}
+\begin{threeparttable}
+\caption{\label{tab:tag-table}}
+\begin{tabular}{llccc}
+\toprule
+Stimuli & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Percent} & \multicolumn{1}{c}{r}\\
+\midrule
+Age of Acquisition & Estimated age of first learning for a concept. & 100.00 & 5.3 & .174\\
+Ambiguity/Word Meaning & Estimates of ambiguity for a concept or information about different word meanings (i.e. number of meanings). & 31.00 & 1.6 & -.054\\
+Arousal & Estimates of strength of response to a concept. & 54.00 & 2.8 & .196\\
+Association & Estimates of the relationship between concepts that are used together, often in free association format (i.e. the first word that pops to mind after a cue word has been listed). & 85.00 & 4.5 & -.322\\
+Category & Information related to lists of words all related to one cue word, such as bird, plant, animal. & 44.00 & 2.3 & -.041\\
+Cloze Probabilities & The probability of an individual word completing a specific spot in a sentence. & 6.00 & 0.3 & .008\\
+Complexity & Estimates of the intricacy or complicatedness of a concept. & 18.00 & 0.9 & .069\\
+Concreteness & Estimates of the non-abstractness of a concept, sometimes described as how touchable a concept is. & 67.00 & 3.5 & .015\\
+Confusion Matrices & Probabilities of distinctiveness between pairs of concepts, or the likelihood those two concepts will be confused with each other (usually letters). & 18.00 & 0.9 & -.187\\
+Distinctiveness & Estimates of how different, unique a concept seemed. & 10.00 & 0.5 & -.000\\
+Dominance & Estimates of how important or powerful a concept seemed. & 32.00 & 1.7 & .070\\
+Ease of Learning & Estimates of how difficult a concept was to remember. & 5.00 & 0.3 & -.100\\
+Familiarity & Estimates of how well known a concept seemed. & 132.00 & 6.9 & .164\\
+Frequency & The rates of occurrence for concepts. & 227.00 & 11.9 & .033\\
+Grapheme-Phoneme Correspondence & The relationship between written and spoken symbols. & 18.00 & 0.9 & -.008\\
+Identification & Estimates of the likelihood of remembering concepts. & 16.00 & 0.8 & .052\\
+Identification - Lexical Decision & Participant response times to real and pseudowords in a yes/no decision task. & 12.00 & 0.6 & .084\\
+Identification - Naming & Participant response times to reading aloud real and pseudowords. & 48.00 & 2.5 & .130\\
+Image Agreement & Estimates of the similarity between images. & 20.00 & 1.1 & .077\\
+Image Variability & Estimates of the complexity of images. & 5.00 & 0.3 & .041\\
+Imageability & Estimates of how easy or difficulty a concept is to imagine. & 96.00 & 5.1 & .078\\
+Intensity & Estimates of the strength of a concept or how intense the concept seems. & 6.00 & 0.3 & .077\\
+Letters & Alphabetic characters. & 62.00 & 3.3 & .095\\
+Meaningfulness & Estimates of how meaningful or significant a concept seems. & 47.00 & 2.5 & -.149\\
+Modality & The different ways or modes that something can be experiences (i.e. perceptual, tactile). & 5.00 & 0.3 & .046\\
+Morphology & The structure of a concept\T1\textquoteright s morphemes. & 11.00 & 0.6 & .100\\
+Name Agreement & Estimates of the similarity between concepts. & 42.00 & 2.2 & .104\\
+Orthographic Neighborhood & The number of concepts that differ by one letter. & 50.00 & 2.6 & .129\\
+Part of Speech & Type of speech for a concept (i.e. verbs, nouns). & 59.00 & 3.1 & .117\\
+Phonemes & A basic unit of sound in a language wherein changes bring changes to a word\T1\textquoteright s meaning. & 45.00 & 2.4 & .115\\
+Phonological Neighborhood & The number of concepts that differ by one phoneme. & 34.00 & 1.8 & .128\\
+Priming & The advantage in processing a concept receives when shown together with a related concept. & 6.00 & 0.3 & .039\\
+Pronunciation & The way in which a concept is spoken. & 16.00 & 0.8 & -.173\\
+Response Times & The amount of time required to respond to a concept. & 67.00 & 3.5 & .071\\
+Recall & The likelihood of remembering a concept from memory. & 19.00 & 1.0 & .007\\
+Recognition & The likelihood of recognizing (remembering) a concept from memory. & 14.00 & 0.7 & .038\\
+Rime & Concepts that have corresponding sounds. & 5.00 & 0.3 & -.000\\
+Semantics & Estimates of relationships between word pairs based on definition and meaning. & 92.00 & 4.8 & .073\\
+Sensory/Motor & Studies that used different sensory mechanisms (tactile or visually presented) or had ratings of actions/animation of concepts. & 34.00 & 1.8 & .077\\
+Sentence Completion & Estimates of common conceptions that would complete a blank in sentence. & 6.00 & 0.3 & -.011\\
+Similarity & Estimations of the likeness or sameness between two concepts. & 20.00 & 1.1 & .069\\
+Syllables & A unit of pronunciation with at least one vowel, dipthong, or consonant. & 57.00 & 3.0 & .173\\
+Typicality & Estimates of how common or normal a feature is for a concept. & 25.00 & 1.3 & .028\\
+Valence/Emotion & Estimates of the strength of emotions or feelings for concepts. & 89.00 & 4.7 & .152\\
+Visual Complexity & Estimates of the intricacy or complicatedness of a picture. & 36.00 & 1.9 & .105\\
+Word Completion & Estimates of likelihoods of letter combinations that would complete a word. & 9.00 & 0.5 & -.031\\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{center}
+\end{table*}
+\efloatseparator
+ 

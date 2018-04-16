@@ -1,0 +1,31 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{LAB_files/figure-latex/pub-fig-1.pdf}
+\caption{\label{fig:pub-fig}Publication frequency across years.}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{LAB_files/figure-latex/word-fig-1.pdf}
+\caption{\label{fig:word-fig}Number of word stimuli plotted across years.
+Top left quandrant includes all word stimuli. Top right quadrant
+includes word stimuli ranging up to 1000 words, bottom left quadrant
+portrays stimuli counts from 1000 to one million, and bottom right
+quadrant indicates all stimuli above one million.}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{LAB_files/figure-latex/tag-fig-1.pdf}
+\caption{\label{fig:tag-fig}Publication frequency across years.}
+\end{figure*}
+\efloatseparator
+ 
