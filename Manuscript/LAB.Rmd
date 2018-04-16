@@ -49,6 +49,7 @@ library(shiny) #to cite shiny
 library(reshape)
 library(MOTE)
 library(ggplot2)
+library(cowplot)
 
 #load the data
 master = read.csv("lab_table.csv")
@@ -144,7 +145,7 @@ In many instances, megastudies are often named, such as the English Lexicon Proj
 
 ### Keyword Tags
 
-Keyword tags are the majority of the database, as they allow for the best understanding of trends and availability of stimuli. Table \@ref(tab:lang-table) portrays a list of tags, frequencies, percentages, descriptions, and correlations (described below). Each article was coded with tags based on the description of the accessible data, so that one article may have many tags. However, due to the cumulative nature of database research, this tagging system does not mean that each article collected that particular type of data. The most common example of this distinction occurs when data is combined across sources, but presented in a new article. The @Maki2004 semantic distance norms also included values from the South Florida Free Association norms [@Nelson2004], and Latent Semantic Analysis [@Landauer1997]. Therefore, this article was coded with association and semantics, even though the association norms were not collected in that paper. As described above, some small frequency tags were used because of the initial pass through newer articles, but these were left in the database because of their specificity, and they can be used in future additions.
+Keyword tags are the majority of the database, as they allow for the best understanding of trends and availability of stimuli. Table \@ref(tab:lang-table) portrays a list of tags, frequencies, percentages, descriptions, and correlations (described below). Each article was coded with tags based on the description of the accessible data, and one article may have many tags. However, due to the cumulative nature of database research, this tagging system does not mean that each article collected that particular type of data. The most common example of this distinction occurs when data was combined across sources, but presented in a new article. The @Maki2004 semantic distance norms also included values from the South Florida Free Association norms [@Nelson2004], and Latent Semantic Analysis [@Landauer1997]. Therefore, this article was coded with association and semantics, even though the association norms were not collected in that paper. As described above, some small frequency tags were used because of the initial pass through newer articles, but these were left in the database because of their specificity, and they can be used in future additions.
 
 ```{r tag-table, echo = FALSE, results = 'asis'}
 tagwordtable = read.csv("TagWordTab.csv")
@@ -224,20 +225,87 @@ yearhist = ggplot(master, aes(year))
       coord_cartesian(xlim = c(1900, 2025))
 ```
 
+### Stimuli
 
+Stimuli are presented in Table \@ref(tab:lang-table), and a review of this table indicated that the publication of word stimuli was slight under half the dataset (`r stimwordtable$Percent[stimwordtable$Stimuli == "Words"]`), which has quite a large range of quantity of stimuli from only ten words to a large corpus of over 500 million words. The wide range of data includes these corpora materials, but there are very large word norming projects outside of the corpora included in the LAB. Other types of word stimuli also appear commonly in the LAB data such as categories, letters, and word pairs. Because linguistic data was of particular interest, we selected publications based on words and word pairs, and plotted the number of stimuli presented in the paper to examine big data trends. These data were broken down by set size in Figure \@ref(fig:word-fig). The upper left hand quadrant shows all stimuli across years, and the big data publications stand out in the last fifteen years of publications. This data was then further broken down into small datasets (<1,000 stimuli; upper right quadrant), medium datasets (1,000 - 1,000,000 stimuli; bottom left quadrant), and large datasets (1,000,000+ although there is a large jump between medium and large as most data is either half million or less or a million or more; bottom right quadrant). The small dataset graph shows that these publications are common across time, while the bottom two quadrants are more telling for the megastudies trend investigation. As with languages and tags (below), we see an increase in the number of medium and very large datasets across the years where the lone large dataset outlier in the early years is the Brown Corpus [@Kucera1967]. 
 
-###Stimuli
-Stimuli are presented in Table 1 with totals, percentages, means (standard deviations), and minimum/maximum values (and online under Stimuli Frequency Table). Naturally, the publication of word norms was over half the dataset (50.55%), which has quite a large range of quantity of stimuli from only ten words to a large corpus of over 500 million words. Other types of word stimuli also appear commonly in the stimuli set such as categories, letters, and word pairs. Because linguistic data was of interest to this publication, we selected publications based on words, and plotted the number of stimuli presented in the paper to examine big data developments. These data were broken down by set size in Figure 3. The upper left hand quadrant shows all stimuli across years, and the big data publications stand out in the last fifteen years of publications. This data was then further broken down into small datasets (<1,000 stimuli; upper right quadrant), medium datasets (1,000 – 500,000 stimuli; bottom left quadrant), and large datasets (500,000 + although there is a large jump between medium and large as most data is either half million or less or a million or more; bottom right quadrant). The small dataset graph shows that these publications are common across time, while the bottom two quadrants are more telling for the megastudies trend investigation. As with languages and tags (below), we see an increase in the number of medium and very large datasets across the years [the lone outlier in the large dataset is the Brown Corpus, @Kucera1967]. 
-###Languages
+```{r word-fig, echo=FALSE, fig.cap="Number of word stimuli plotted across years. Top left quandrant includes all word stimuli. Top right quadrant includes word stimuli ranging up to 1000 words, bottom left quadrant portrays stimuli counts from 1000 to one million, and bottom right quadrant indicates all stimuli above one million.", fig.height=8, fig.width=8}
+
+type1 = master[ , c("no1", "type1", "year")]
+type2 = master[ , c("no2", "type2", "year")]
+colnames(type2) = c("no1", "type1", "year")
+stimworddata = rbind(type1, type2)
+stimworddata = subset(stimworddata, type1 != "")
+stimworddata$type1 = droplevels(stimworddata$type1)
+stimworddata$type1 = factor(stimworddata$type1, 
+                            levels = stimwordtable$Stimuli)
+
+#all graph
+stimword = subset(stimworddata, type1 == "Words" | type1 == "Word Pairs")
+allword = ggplot(stimworddata, aes(year, no1)) + 
+  geom_point() + 
+  cleanup + 
+  xlab("Publication Year") +
+  ylab("Number of Stimuli")
+
+#small graph
+small = subset(stimword, no1 <= 1000)
+smallword = ggplot(small, aes(year, no1)) + 
+  geom_point() + 
+  cleanup + 
+  xlab("Publication Year") +
+  ylab("Number of Stimuli") + 
+  coord_cartesian(ylim = c(0, 1000), xlim = c(1900,2018)) +
+  scale_x_continuous(breaks = c(1900, 1950, 2000))
+  
+#medium graph
+med = subset(stimword, no1 > 1000 & no1 < 1000000)
+medword = ggplot(med, aes(year, no1)) + 
+  geom_point() + 
+  cleanup + 
+  xlab("Publication Year") +
+  ylab("Number of Stimuli") + 
+  coord_cartesian(ylim = c(1000, 600000), xlim = c(1900,2018)) +
+  scale_y_continuous(breaks = c(1000,100000,200000,300000,400000,500000, 6000000),
+                      labels = function(x) format(x, scientific = TRUE)) +
+  scale_x_continuous(breaks = c(1900, 1950, 2000))
+
+#large graph
+large = subset(stimword, no1 >=1000000)
+largeword = ggplot(large, aes(year, no1)) + 
+  geom_point() + 
+  cleanup + 
+  xlab("Publication Year") +
+  ylab("Number of Stimuli")  + 
+  coord_cartesian(ylim = c(1000000, 600000000), xlim = c(1900,2018)) +
+  scale_y_continuous(breaks = c(1000000,200000000,400000000,600000000),
+                     labels = function(x) format(x, scientific = TRUE)) +
+  scale_x_continuous(breaks = c(1900, 1950, 2000))
+
+completegraph = plot_grid(allword, smallword, medword, largeword,
+                   hjust = -1,
+                   nrow = 2
+)
+completegraph
+```
+
+### Languages
+
 The variety and number of languages for stimuli provided an encouraging picture of the growth and diversity of psycholinguistic stimuli, as seen in Table 2. Many articles include multiple languages (4.10%), as well as the inclusion of both Portuguese (1.78%) and Spanish (6.60%), French (5.70%), and even a small number of articles in Greek (0.89%). To examine trends, the English only articles were filtered out of the dataset since they were the majority of publications (63.99%), and were published across all years present in this data. More than half of the papers with multiple languages have been published since 2010 (56.52%). Additionally, the last ten years have seen an explosion of publications in non-English languages (134 publications, 74.81%) with nearly double the number in 2013 (16) than 2012 (9). 
-###Tags
-Table 3 displays the number, percentages, correlations of tags across (with?) year, and descriptions of tags (also found online under Tag Frequency Table with N and % values based on any updated numbers). Undoubtedly, these tags represent changes in terminology over time, and some could be combined or recoined. However, even if low frequency (N < 10; fourteen tags) tags are excluded, thirty-five different tags were used to describe the types of psycholinguistic data. Many of these tags can be considered individual research areas, and the sizeable number of different options indicates how complex and diverse the field has become since the publication of free association norms in 1910 (Kent & Rosanoff association norms).
-The total number of tags for each publication was then tallied, and an average number of tags per half decade were plotted in Figure 4 to determine if the number of variables included in a study has grown over time (total tags and year r = 0.26, p = 0.10). Considering the larger number of publications in the 2000s versus 1950s to 1970s, it appears that the number of keywords for articles is also slowly growing over time. This trend may indicate the evolution in computing possibilities to be able to publish large amounts of data, but also may indicate a desire to combine datasets so that even more stimuli may be considered at once for modeling or experiment creation.
-	Next, tags with at least a sample of 30 publications were investigated individually for trends across time (correlations presented in Table 3, all ps = 0.29-0.40). Individual graphs can be created by clicking on the Tags Per Year Graph link online, which show the total frequency of the selected tag by year. While correlations were not significant, some small positive trends were found, such as the increase in age of acquisition, familiarity, imagery, orthographic neighborhood, syllables, and valence norms. Intriguingly, meaningfulness and association both showed negative correlations, but these correlations can be understood as an artifact of the publication of a book on association norms in the 1970s [@Postman1970], as well as a recent drop off of in the small but steady use of meaningfulness. These small correlations may partially be explained by the sheer number and variation of data available in the LAB portal, as one would expect the number of frequency tags to increase with the recent SUBTLEX publications. Indeed, if the frequency tags are plotted by year an increase across the last decade (22 tags in 2013 alone) can be shown. Readers are encouraged to view the individual graphs for tags to investigate the change of keyword frequency over time, including the rise and demise of several research areas. For example, confusion matrices heyday appears to range from the early 70s to the mid 80s, while arousal norms do not make an appearance until the late 90s. 
-#Conclusion
-This article had two main purposes: 1) to present the LAB dataset and portal as an annotated bibliography and searchable tool for researchers, and 2) to view trends in psycholinguistic research with an eye toward big data. We believe the LAB website will be a useful channel for all levels of researchers, from graduate students looking for experimental stimuli to design their experiments, to the familiar investigator who wishes to dig deeper into the diverse choices offered. Further, while the majority of publications occur in one particular journal, the LAB allows someone to find articles they may have missed in other areas with the advantage of being collected into one location. User-friendly search tools are provided to aide in searching for specific languages, stimuli, or keywords, as well as multiple outputs for easy copying into Excel or SPSS. With the advent of DOI, links are provided to the original source for a quick transition to the materials provided in that publication. While this article's statistics will become dated with the updates to the LAB, dynamic tables and graphs are provided online to see the current status of the field. Lastly, we encourage users to actively report errors and suggest updates for the LAB dataset as a way to crowd source information that is surely missing, especially in non-English languages.
-In the introduction, we provided two examples of current megastudies (SUBTLEX and the Lexicon projects), in addition to how researchers might collect big data through Mechanical Turk or Twitter. This article stepped back from looking at individual, large studies or ways to collect data to use the information provided by publications as a window into the fluctuations of the field. Megastudies have become a prevalent topic, but data could have revealed that this popularity was due to recent publication of a small subset of articles. Instead, analyses showed that not only are the numbers of publications accumulating, but the sizes of datasets are also growing in tandem. Megastudies specifically focus on large datasets, but big data can also be indicated here by the divergence in languages available, number of places to publish such data, and the increasing number of keywords for articles across years. Time will tell if these trends can and will continue or if certain areas will see a confusion matrix type decline after many large datasets are published. With the move of traditional lab experiments to smartphone and tablet technology [@Dufau2011], it seems likely that researchers in psycholinguistics will continue to find new and creative ways to modernize the field.
 
+### Tags
+
+Table \@ref(tab:lang-table) displays the number, percentages, correlations of tags across (with?) year, and descriptions of tags (also found online under Tag Frequency Table with N and % values based on any updated numbers). Undoubtedly, these tags represent changes in terminology over time, and some could be combined or recoined. However, even if low frequency (N < 10; fourteen tags) tags are excluded, thirty-five different tags were used to describe the types of psycholinguistic data. Many of these tags can be considered individual research areas, and the sizeable number of different options indicates how complex and diverse the field has become since the publication of free association norms in 1910 (Kent & Rosanoff association norms).
+
+The total number of tags for each publication was then tallied, and an average number of tags per half decade were plotted in Figure 4 to determine if the number of variables included in a study has grown over time (total tags and year r = 0.26, p = 0.10). Considering the larger number of publications in the 2000s versus 1950s to 1970s, it appears that the number of keywords for articles is also slowly growing over time. This trend may indicate the evolution in computing possibilities to be able to publish large amounts of data, but also may indicate a desire to combine datasets so that even more stimuli may be considered at once for modeling or experiment creation.
+
+Next, tags with at least a sample of 30 publications were investigated individually for trends across time (correlations presented in Table 3, all ps = 0.29-0.40). Individual graphs can be created by clicking on the Tags Per Year Graph link online, which show the total frequency of the selected tag by year. While correlations were not significant, some small positive trends were found, such as the increase in age of acquisition, familiarity, imagery, orthographic neighborhood, syllables, and valence norms. Intriguingly, meaningfulness and association both showed negative correlations, but these correlations can be understood as an artifact of the publication of a book on association norms in the 1970s [@Postman1970], as well as a recent drop off of in the small but steady use of meaningfulness. These small correlations may partially be explained by the sheer number and variation of data available in the LAB portal, as one would expect the number of frequency tags to increase with the recent SUBTLEX publications. Indeed, if the frequency tags are plotted by year an increase across the last decade (22 tags in 2013 alone) can be shown. Readers are encouraged to view the individual graphs for tags to investigate the change of keyword frequency over time, including the rise and demise of several research areas. For example, confusion matrices heyday appears to range from the early 70s to the mid 80s, while arousal norms do not make an appearance until the late 90s. 
+
+# Conclusion
+
+This article had two main purposes: 1) to present the LAB dataset and portal as an annotated bibliography and searchable tool for researchers, and 2) to view trends in psycholinguistic research with an eye toward big data. We believe the LAB website will be a useful channel for all levels of researchers, from graduate students looking for experimental stimuli to design their experiments, to the familiar investigator who wishes to dig deeper into the diverse choices offered. Further, while the majority of publications occur in one particular journal, the LAB allows someone to find articles they may have missed in other areas with the advantage of being collected into one location. User-friendly search tools are provided to aide in searching for specific languages, stimuli, or keywords, as well as multiple outputs for easy copying into Excel or SPSS. With the advent of DOI, links are provided to the original source for a quick transition to the materials provided in that publication. While this article's statistics will become dated with the updates to the LAB, dynamic tables and graphs are provided online to see the current status of the field. Lastly, we encourage users to actively report errors and suggest updates for the LAB dataset as a way to crowd source information that is surely missing, especially in non-English languages.
+
+In the introduction, we provided two examples of current megastudies (SUBTLEX and the Lexicon projects), in addition to how researchers might collect big data through Mechanical Turk or Twitter. This article stepped back from looking at individual, large studies or ways to collect data to use the information provided by publications as a window into the fluctuations of the field. Megastudies have become a prevalent topic, but data could have revealed that this popularity was due to recent publication of a small subset of articles. Instead, analyses showed that not only are the numbers of publications accumulating, but the sizes of datasets are also growing in tandem. Megastudies specifically focus on large datasets, but big data can also be indicated here by the divergence in languages available, number of places to publish such data, and the increasing number of keywords for articles across years. Time will tell if these trends can and will continue or if certain areas will see a confusion matrix type decline after many large datasets are published. With the move of traditional lab experiments to smartphone and tablet technology [@Dufau2011], it seems likely that researchers in psycholinguistics will continue to find new and creative ways to modernize the field.
 
 \newpage
 
