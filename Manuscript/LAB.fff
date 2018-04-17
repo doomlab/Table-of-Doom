@@ -16,7 +16,9 @@
 Top left quandrant includes all word stimuli. Top right quadrant
 includes word stimuli ranging up to 1000 words, bottom left quadrant
 portrays stimuli counts from 1000 to one million, and bottom right
-quadrant indicates all stimuli above one million.}
+quadrant indicates all stimuli above one million. The x-axis is
+consistent across graphs, however, the y-axis is scaled for the range of
+stimuli targeted in that graph.}
 \end{figure*}
 \efloatseparator
  
