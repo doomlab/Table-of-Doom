@@ -1,4 +1,5 @@
 ﻿Stimuli,Description,N,r
+Accuracy,Percent accuracy of completing a task in the study.,,
 Age of Acquisition,Estimated age of first learning for a concept.,,
 Ambiguity/Word Meaning,Estimates of ambiguity for a concept or information about different word meanings (i.e. number of meanings).,,
 Arousal,Estimates of strength of response to a concept.,,
@@ -8,6 +9,7 @@ Cloze Probabilities,The probability of an individual word completing a specific 
 Complexity,Estimates of the intricacy or complicatedness of a concept.,,
 Concreteness,"Estimates of the non-abstractness of a concept, sometimes described as how touchable a concept is.",,
 Confusion Matrices,"Probabilities of distinctiveness between pairs of concepts, or the likelihood those two concepts will be confused with each other (usually letters).",,
+Context,"Contextual avaliability or contextual diversity, indicating how easy to remember or how many contexts a concept might appear in.",,
 Distinctiveness,"Estimates of how different, unique a concept seemed.",,
 Dominance,Estimates of how important or powerful a concept seemed.,,
 Ease of Learning,Estimates of how difficult a concept was to remember.,,
@@ -41,6 +43,7 @@ Sensory/Motor,Studies that used different sensory mechanisms (tactile or visuall
 Sentence Completion,Estimates of common conceptions that would complete a blank in sentence.,,
 Similarity,Estimations of the likeness or sameness between two concepts.,,
 Syllables,"A unit of pronunciation with at least one vowel, dipthong, or consonant.",,
+Syntax,Information about the grammatical rules of a language.,,
 Typicality,Estimates of how common or normal a feature is for a concept.,,
 Valence/Emotion,Estimates of the strength of emotions or feelings for concepts.,,
 Visual Complexity,Estimates of the intricacy or complicatedness of a picture.,,

@@ -9,26 +9,26 @@
 \toprule
 Stimuli & $N$ & Percent & Min & Max & $M$ & $SD$\\
 \midrule
-Anagrams & \ \ 6 & 0.8 & \ \ 80 & \ \ \ \ \ \ 378 & \ \ \ \ 229.00 & \ \ \ \  210.72\\
-Categories & 31 & 4.0 & \ \  4 & \ \ \ \ \ \ 240 & \ \ \ \  43.41 & \ \ \ \ \ \ 47.25\\
-Characters & 21 & 2.7 & \ \ 48 & 46800000 & 2480334.00 & 10732577.13\\
-Cloze/Sentences & 35 & 4.5 & \ \  5 & \ \ \ \  1998 & \ \ \ \ 353.66 & \ \ \ \  376.01\\
-Color drawings & \ \ 9 & 1.2 & 200 & \ \ \ \ \ \ 744 & \ \ \ \ 384.00 & \ \ \ \  212.79\\
-Homo/Heterographs & 10 & 1.3 & \ \ 20 & \ \ \ \ \ \ 566 & \ \ \ \ 161.44 & \ \ \ \  175.01\\
-Homo/Heteronyms & \ \ 5 & 0.6 & 114 & \ \ \ \ \ \ 578 & \ \ \ \ 343.75 & \ \ \ \  251.45\\
-Homo/Heterophones & \ \ 3 & 0.4 & \ \ 40 & \ \ \ \ \ \ 207 & \ \ \ \ 148.00 & \ \ \ \ \ \ 93.66\\
-Letters & 56 & 7.2 & \ \  9 & \ \ \ \  8836 & \ \ \ \ 679.08 & \ \ \ \ 1578.86\\
-Line drawings & 42 & 5.4 & \ \ 22 & \ \ \ \ \ \ 520 & \ \ \ \ 243.83 & \ \ \ \  132.15\\
-Names & \ \ 7 & 0.9 & 126 & \ \ \ \ 10000 & \ \  2644.17 & \ \ \ \ 4080.78\\
-Other & 50 & 6.5 & \ \  1 & \ \ \ \  3061 & \ \ \ \ 720.89 & \ \ \ \  924.46\\
-Phonemes & \ \ 4 & 0.5 & 10000 & \ \ \ \ 10000 & \ \ 10000.00 & \ \ \ \ \ \ \ \  NA\\
-Pictures & 62 & 8.0 & \ \  2 & \ \ \ \  2941 & \ \ \ \ 417.45 & \ \ \ \  468.68\\
-Pseudowords & 12 & 1.5 & \ \ 30 & \ \ \ \ 40481 & \ \ 12887.78 & \ \  16115.13\\
-Sounds & \ \ 8 & 1.0 & \ \ 22 & \ \ \ \ \ \ 167 & \ \ \ \ 117.00 & \ \ \ \ \ \ 48.51\\
-Syllables & \ \ 9 & 1.2 & \ \ 33 & \ \  140000 & \ \ 18129.00 & \ \  49247.04\\
-Symbols/Icons & \ \ 5 & 0.6 & \ \ 68 & \ \ \ \ \ \ 600 & \ \ \ \ 308.75 & \ \ \ \  222.26\\
-Word Pairs & 28 & 3.6 & \ \ 40 & \ \ \ \ 72186 & \ \  8076.83 & \ \  20871.25\\
-Words & 372 & 48.0 & \ \ 10 & 593000000 & 6964032.05 & 45996591.65\\
+Anagrams & \ \ 6 & 0.7 & \ \ 80 & \ \ \ \  378 & \ \  229.00 & \ \ \ \ 210.72\\
+Categories & 33 & 3.9 & \ \  4 & \ \ \ \  240 & \ \ \ \ 46.32 & \ \ \ \  51.61\\
+Characters & 21 & 2.5 & \ \ 48 & \ \  80651 & \ \ 8458.37 & \ \ 19210.92\\
+Cloze/Sentences & 35 & 4.1 & \ \  5 & \ \ \ \ 1998 & \ \  353.66 & \ \ \ \ 376.01\\
+Color drawings & \ \ 9 & 1.1 & 200 & \ \ \ \  744 & \ \  384.00 & \ \ \ \ 212.79\\
+Homo/Heterographs & 11 & 1.3 & \ \ 20 & \ \ \ \  566 & \ \  165.00 & \ \ \ \ 165.38\\
+Homo/Heteronyms & \ \ 5 & 0.6 & 114 & \ \ \ \  578 & \ \  343.75 & \ \ \ \ 251.45\\
+Homo/Heterophones & \ \ 4 & 0.5 & \ \ 40 & \ \ \ \  207 & \ \  148.00 & \ \ \ \  93.66\\
+Letters & 57 & 6.7 & \ \  9 & \ \ \ \ 8836 & \ \  669.88 & \ \  1564.37\\
+Line drawings & 43 & 5.1 & \ \ 22 & \ \ \ \  520 & \ \  253.79 & \ \ \ \ 132.09\\
+Names & \ \ 8 & 0.9 & 126 & \ \  10000 & \ \ 2644.17 & \ \  4080.78\\
+Other & 84 & 9.9 & \ \  1 & \ \ \ \ 3061 & \ \  666.13 & \ \ \ \ 876.87\\
+Phonemes & \ \ 9 & 1.1 & 10000 & \ \  10000 & 10000.00 & \ \ \ \ \ \ \ \ NA\\
+Pictures & 74 & 8.7 & \ \  2 & \ \ \ \ 2941 & \ \  431.26 & \ \ \ \ 480.61\\
+Pseudowords & 15 & 1.8 & \ \ 30 & \ \  40481 & 14004.36 & \ \ 15223.04\\
+Sounds & 15 & 1.8 & \ \ 22 & \ \ \ \ 2159 & \ \  462.58 & \ \ \ \ 672.79\\
+Syllables & 11 & 1.3 & \ \ 20 & \ \ 303636 & 44868.80 & 100922.91\\
+Symbols/Icons & \ \ 9 & 1.1 & \ \ 68 & \ \ \ \  600 & \ \  294.60 & \ \ \ \ 195.07\\
+Word Pairs & 28 & 3.3 & \ \ 40 & \ \  72186 & \ \ 8076.83 & \ \ 20871.25\\
+Words & 374 & 43.9 & \ \ 10 & 33500000 & 115731.45 & 1843018.04\\
 \bottomrule
 \end{tabular}
 }
@@ -47,21 +47,27 @@ Words & 372 & 48.0 & \ \ 10 & 593000000 & 6964032.05 & 45996591.65\\
 \toprule
 Language & $N$ & Percent\\
 \midrule
-British English & 23 & 3.3\\
-Chinese & 25 & 3.5\\
-Dutch & 14 & 2.0\\
-English & 400 & 56.7\\
-French & 40 & 5.7\\
-German & 30 & 4.2\\
-Greek & \ \ 5 & 0.7\\
-Italian & 19 & 2.7\\
-Japanese & 12 & 1.7\\
-Multiple & 37 & 5.2\\
-Other & 32 & 4.5\\
-Portuguese & 15 & 2.1\\
-Spanish & 54 & 7.6\\
+Arabic & \ \ 8 & 0.9\\
+British English & 25 & 2.8\\
+Chinese & 33 & 3.7\\
+Dutch & 18 & 2.0\\
+English & 470 & 53.2\\
+French & 46 & 5.2\\
+German & 37 & 4.2\\
+Greek & \ \ 6 & 0.7\\
+Italian & 20 & 2.3\\
+Japanese & 14 & 1.6\\
+Multiple & 86 & 9.7\\
+Polish & \ \ 6 & 0.7\\
+Portuguese & 18 & 2.0\\
+Russian & \ \ 6 & 0.7\\
+Spanish & 61 & 6.9\\
 \bottomrule
+\addlinespace
 \end{tabular}
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Languages with less than five lines were excluded for publication space purposes.}
+\end{tablenotes}
 \end{threeparttable}
 \end{center}
 \end{table*}
@@ -78,34 +84,38 @@ Spanish & 54 & 7.6\\
 \toprule
 Stimuli & $N$ & Percent & $r$\\
 \midrule
-Age of Acquisition & 100 & 5.3 & .173\\
-Ambiguity/Word Meaning & 31 & 1.6 & -.055\\
-Arousal & 54 & 2.8 & .195\\
-Association & 85 & 4.5 & -.322\\
-Category & 44 & 2.3 & -.041\\
-Cloze Probabilities & \ \ 6 & 0.3 & NA\\
-Complexity & 18 & 0.9 & NA\\
-Concreteness & 67 & 3.5 & .015\\
-Confusion Matrices & 18 & 0.9 & NA\\
+Accuracy & 10 & 0.5 & NA\\
+Age of Acquisition & 107 & 4.9 & .134\\
+Ambiguity/Word Meaning & 31 & 1.4 & -.076\\
+Arousal & 62 & 2.9 & .173\\
+Association & 86 & 4.0 & -.336\\
+Category & 48 & 2.2 & -.068\\
+Cloze Probabilities & \ \ 7 & 0.3 & NA\\
+Complexity & 22 & 1.0 & NA\\
+Concreteness & 73 & 3.4 & .001\\
+Confusion Matrices & 18 & 0.8 & NA\\
+Context & 14 & 0.6 & NA\\
 Distinctiveness & 10 & 0.5 & NA\\
-Dominance & 32 & 1.7 & .069\\
-Ease of Learning & \ \ 5 & 0.3 & NA\\
-Familiarity & 132 & 6.9 & .164\\
-Frequency & 227 & 11.9 & .033\\
-Grapheme-Phoneme Correspondence & 18 & 0.9 & NA\\
-Identification & 16 & 0.8 & NA\\
-Identification - Lexical Decision & 12 & 0.6 & NA\\
-Identification - Naming & 48 & 2.5 & .129\\
-Image Agreement & 20 & 1.1 & NA\\
-Image Variability & \ \ 5 & 0.3 & NA\\
-Imageability & 96 & 5.1 & .077\\
-Intensity & \ \ 6 & 0.3 & NA\\
-Letters & 62 & 3.3 & .095\\
-Meaningfulness & 47 & 2.5 & -.149\\
-Modality & \ \ 5 & 0.3 & NA\\
+Dominance & 33 & 1.5 & .045\\
+Ease of Learning & \ \ 5 & 0.2 & NA\\
+Familiarity & 141 & 6.5 & .116\\
+Frequency & 252 & 11.6 & .005\\
+Grapheme-Phoneme Correspondence & 18 & 0.8 & NA\\
+Identification & 17 & 0.8 & NA\\
+Identification - Lexical Decision & 16 & 0.7 & NA\\
+Identification - Naming & 50 & 2.3 & .098\\
+Image Agreement & 24 & 1.1 & NA\\
+Image Variability & 10 & 0.5 & NA\\
+Imageability & 95 & 4.4 & .023\\
+Intensity & \ \ 8 & 0.4 & NA\\
+Letters & 70 & 3.2 & .081\\
 \bottomrule
+\addlinespace
 \end{tabular}
 }
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag.}
+\end{tablenotes}
 \end{threeparttable}
 \end{center}
 \end{table*}
@@ -122,30 +132,37 @@ Modality & \ \ 5 & 0.3 & NA\\
 \toprule
 Stimuli & $N$ & Percent & $r$\\
 \midrule
-Morphology & 11 & 0.6 & NA\\
-Name Agreement & 42 & 2.2 & .103\\
-Orthographic Neighborhood & 50 & 2.6 & .129\\
-Part of Speech & 59 & 3.1 & .117\\
-Phonemes & 45 & 2.4 & .115\\
-Phonological Neighborhood & 34 & 1.8 & .128\\
-Priming & \ \ 6 & 0.3 & NA\\
-Pronunciation & 16 & 0.8 & NA\\
-Response Times & 67 & 3.5 & .071\\
-Recall & 19 & 1.0 & NA\\
-Recognition & 14 & 0.7 & NA\\
-Rime & \ \ 5 & 0.3 & NA\\
-Semantics & 92 & 4.8 & .073\\
-Sensory/Motor & 34 & 1.8 & .077\\
+Meaningfulness & 48 & 2.2 & -.162\\
+Modality & \ \ 6 & 0.3 & NA\\
+Morphology & 24 & 1.1 & NA\\
+Name Agreement & 47 & 2.2 & .090\\
+Orthographic Neighborhood & 56 & 2.6 & .112\\
+Part of Speech & 67 & 3.1 & .095\\
+Phonemes & 62 & 2.9 & .126\\
+Phonological Neighborhood & 38 & 1.8 & .111\\
+Priming & \ \ 7 & 0.3 & NA\\
+Pronunciation & 16 & 0.7 & NA\\
+Response Times & 78 & 3.6 & .069\\
+Recall & 19 & 0.9 & NA\\
+Recognition & 18 & 0.8 & NA\\
+Rime & \ \ 5 & 0.2 & NA\\
+Semantics & 109 & 5.0 & .056\\
+Sensory/Motor & 39 & 1.8 & .071\\
 Sentence Completion & \ \ 6 & 0.3 & NA\\
-Similarity & 20 & 1.1 & NA\\
-Syllables & 57 & 3.0 & .173\\
-Typicality & 25 & 1.3 & NA\\
-Valence/Emotion & 89 & 4.7 & .152\\
-Visual Complexity & 36 & 1.9 & .104\\
-Word Completion & \ \ 9 & 0.5 & NA\\
+Similarity & 21 & 1.0 & NA\\
+Syllables & 64 & 3.0 & .148\\
+Syntax & 23 & 1.1 & NA\\
+Typicality & 25 & 1.2 & NA\\
+Valence/Emotion & 115 & 5.3 & .156\\
+Visual Complexity & 40 & 1.8 & .090\\
+Word Completion & \ \ 9 & 0.4 & NA\\
 \bottomrule
+\addlinespace
 \end{tabular}
 }
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag.}
+\end{tablenotes}
 \end{threeparttable}
 \end{center}
 \end{table*}
