@@ -13,10 +13,9 @@
 \centering
 \includegraphics{LAB_files/figure-latex/word-fig-1.pdf}
 \caption{\label{fig:word-fig}Number of word stimuli plotted across years.
-Top left quandrant includes all word stimuli. Top right quadrant
-includes word stimuli ranging up to 1000 words, bottom left quadrant
-portrays stimuli counts from 1000 to one million, and bottom right
-quadrant indicates all stimuli above one million. The x-axis is
+Top left quandrant includes all word stimuli, minus two outliers. Top
+right quadrant includes word stimuli ranging up to 10000 words, bottom
+left quadrant portrays stimuli counts exceeding 10000. The x-axis is
 consistent across graphs, however, the y-axis is scaled for the range of
 stimuli targeted in that graph.}
 \end{figure*}
@@ -27,7 +26,8 @@ stimuli targeted in that graph.}
 
 \centering
 \includegraphics{LAB_files/figure-latex/tag-fig-1.pdf}
-\caption{\label{fig:tag-fig}Tag publication frequency across years.}
+\caption{\label{fig:tag-fig}Number of tags included in each publication
+across years.}
 \end{figure*}
 \efloatseparator
  

@@ -112,12 +112,13 @@ database information}
 
 \authornote{Erin M. Buchanan is an Associate Professor of
 Quantitative Psychology at Missouri State University. K. D. Valentine is
-a Ph.D.~candidate at the University of Missouri. Nicholas P. Maxwell is
-a Masters' candidate at Missouri State University. We thank Michael T.
-Carr, Farren E. Bankovich, Samantha D. Saxton, and Emmanuel Segui for
-their help with the original data processing, and William Padfield,
-Abigial Van Nuland, and Abbie Wikowsky for their help with the
-application develop for the website.
+a Ph.D.~candidate at the University of Missouri. Nicholas P. Maxwell
+received his master's degree from Missouri State University and is now a
+Ph.D.~candidate at the University of Southern Mississippi. We thank
+Michael T. Carr, Farren E. Bankovich, Samantha D. Saxton, and Emmanuel
+Segui for their help with the original data processing, and William
+Padfield, Abigial Van Nuland, and Addie Wikowsky for their help with the
+application development for the website.
 
 Correspondence concerning this article should be addressed to Erin M.
 Buchanan, 901 S. National Ave, Springfield, MO 65897. E-mail:
@@ -173,7 +174,7 @@ we have the capability to collect, analyze, and publish large datasets
 for research into memory models (Cree, McRae, \& McNorgan, 1999; Moss,
 Tyler, \& Devlin, 2002; Rogers \& McClelland, 2004; Vigliocco, Vinson,
 Lewis, \& Garrett, 2004), aphasias (Vinson, Vigliocco, Cappa, \& Siri,
-2003), featural probability (Cree \& McRae, 2003; McRae, \{de Sa\}, \&
+2003), featural probability (Cree \& McRae, 2003; McRae, Sa, \&
 Seidenberg, 1997; Pexman, Holyk, \& Monfils, 2003), valence (Dodds,
 Harris, Kloumann, Bliss, \& Danforth, 2011; Vo et al., 2009; Warriner,
 Kuperman, \& Brysbaert, 2013), and reading speeds and priming (Balota et
@@ -280,40 +281,42 @@ data movement within cognitive psychology.
 
 This manuscript was written with \emph{R} markdown and \emph{papaja}
 (Aust \& Barth, 2017) and can be found at \url{https://osf.io/9bcws/}.
-Readers can find the website by going to \url{http://www.wordnorms.com},
-and the source files for the website can be found at
-\url{https://github.com/doomlab/wordnorms}. From the webpage, the top
-navigation bar includes a link to direct the reader to the LAB page. On
-the LAB page, we have included a purpose statement and several summary
-options. First, the variable tables include summary descriptions about
-the stimuli and keyword (tags) variables in this study using an embedded
-Shiny application. Shiny is an open source graphical user interface
-\emph{R} package that allows researchers to build interactive web
-applications (Chang, Cheng, Allaire, Xie, \& McPherson, 2017). These
-apps connect to the LAB database and display the current sample size
-\emph{N}, minimum, maximum, mean and standard deviation for each
-variable, when appropriate. The advantage to using Shiny apps is dynamic
-updating of the database, so as new information is added, the app will
-display the most current statistics, while this paper represents a
-static point in the database development. The website includes more
-information on versioning of the dataset for users to reference, along
-with instructions on how and what to contribute to the LAB.
+Readers can find the LAB's website by going to
+\url{http://www.wordnorms.com}, and the source files for the website can
+be found at \url{https://github.com/doomlab/wordnorms}. From the
+webpage, the top navigation bar includes a link to direct the reader to
+the LAB page. On the LAB page, we have included a purpose statement and
+several summary options. First, the two variable tables include summary
+descriptions about the stimuli and keyword (tag) variables in this study
+using an embedded Shiny application. Shiny is an open source graphical
+user interface \emph{R} package that allows researchers to build
+interactive web applications (Chang, Cheng, Allaire, Xie, \& McPherson,
+2017). These apps connect to the LAB database and display the current
+sample size \emph{N}, minimum, maximum, mean standard deviation, and
+correlation across years for each variable, when appropriate. The
+advantage to using Shiny apps is dynamic updating of the database, so as
+new information is added, the app will display the most current
+statistics, while this paper represents a static point in the database
+development.The entire dataset can be viewed and filtered based on
+keyword, language, and stimuli type. This search app allows for multiple
+filter options, so a person may drill down into very specific search
+criteria. Underneath the search functions, yearly trend visualization
+and descriptive statistics may be found including frequency tables of
+stimuli and keywords. Finally, the complete database in .csv format can
+be downloaded. Specific features will be outlined below in relation to
+the database creation.
 
-Viewers can suggest articles that should be included in the dataset by
-using the online Mendeley group at
+The website includes more information on versioning of the dataset for
+users to reference, along with instructions on how and what others can
+contribute to the LAB. Viewers can suggest articles that should be
+included in the dataset by using the online Mendeley group (requires
+login and account) at
 \url{https://www.mendeley.com/community/the-lab-linguistic-annotated-bibliography/}
 or using the email link included in the top right corner of the website.
 Mendeley is free reference software that allows for open source groups
 to collaborate on curating reference lists. Additionally, we have
-provided a BibTex reference file that can be imported into most
-reference software programs. The entire dataset can be viewed and
-filtered based on keyword, language, and stimuli type. This search app
-allows for multiple filter options, so a person may drill down into very
-specific search criteria. Underneath the search functions, yearly trend
-visualization and descriptive statistics may be found including
-frequency tables of stimuli and keywords. Finally, the complete database
-in .csv format can be downloaded. Specific features will be outlined
-below in relation to the database creation.
+provided a BibTex reference file linked on the website that can be
+imported into most reference software programs.
 
 \hypertarget{database-methods}{%
 \section{Database Methods}\label{database-methods}}
@@ -323,13 +326,13 @@ below in relation to the database creation.
 
 Bradshaw (1984) and Proctor and Vu (1999)'s lists of database
 information were used as starting points for collection of research
-articles. We searched \emph{Academic Search Premier, PsycInfo, and ERIC}
-through the EBSCO host system, as well as \emph{Google Scholar and PLoS
-One} to find other relevant articles using the following keywords:
-\emph{corpus, linguistic database, linguistic norms, norms, and
-database}. Additionally, since a large number of the original articles
-were hosted by the Psychonomic Society, the Springer website was
-searched with these terms that covered the newer editions of
+articles. We searched \emph{Academic Search Premier}, \emph{PsycInfo},
+and \emph{ERIC} through the EBSCO host system, as well as \emph{Google
+Scholar} and \emph{PLoS One} to find other relevant articles using the
+following keywords: \emph{corpus, linguistic database, linguistic norms,
+norms}, and \emph{database}. Additionally, since a large number of the
+original articles were hosted by the Psychonomic Society, the Springer
+website was searched with these terms that covered the newer editions of
 \emph{Behavior Research Methods} and \emph{Memory \& Cognition}. We then
 filtered for articles that met the following criteria: 1) contained
 database information as supplemental material, 2) demonstrated programs
@@ -355,7 +358,7 @@ round of articles found (approximately 100) were analyzed to determine
 information that would be pertinent to a user who wished to search for
 normed stimuli. Based on these reviews and lab discussions, we coded the
 following information from each article: 1) journal information, 2)
-stimuli types, 3) stimuli language, 4) programs or corpus name, 5)
+stimuli types, 3) stimuli language, 4) program or corpus name, 5)
 keywords, which we refer to as tags, 6) special populations, and 7)
 other notes that did not fit into those categories. Each piece of
 information is detailed below. In some instances, codes were not used as
@@ -386,23 +389,25 @@ concept studies were apparent after background review. Therefore,
 stimuli were coded based on the dominant description from the article
 (i.e., although heteronyms are words and word pairs, they were coded
 specifically as heteronyms). The number of stimuli presented in the
-appendix or database was coded with the stimuli, unless the article
-covered specific programs, search or experimental creation tools, which
-is the majority of the \enquote{other} stimuli category. Because many
-articles included two types of stimuli, or references to different
-articles where stimuli were selected from, two options for stimuli were
-included. Therefore, the total values for number of stimuli do not add
-up to the number of articles in the database because of multiple
-instances in articles or no stimuli for program descriptions. Table
+appendix or database was coded with the stimuli if it was avaliable.
+Generally, programs, corpora, and experimental creation tools did not
+include this information, which are the majority of the \enquote{other}
+stimuli category. Because many articles included two types of stimuli,
+or references to different articles where stimuli were selected from,
+two options for stimuli were included.
+
+Therefore, the total values for number of stimuli do not add up to the
+number of articles in the database because of multiple instances in
+articles or no stimuli for program descriptions. Table
 \ref{tab:stim-table} includes a stimuli list, the number of times that
-each stimuli was used, percentage of the total stimuli codes, the mean
-and standard deviation of the number of those stimuli, minimum, and
-maximum. Brief variable descriptions are provided online under variable
-tables. Researchers often cited specific previous works where stimuli
-were selected from, and these references were included, which can be
-found in the downloaded data. Table \ref{tab:stim-table} is included
-dynamically online under \enquote{view the variable table}" and
-\enquote{view the frequency table}.
+each stimuli was used, percentage of the total stimuli codes, minimum,
+maximum, the mean and standard deviation of the number of those stimuli.
+Brief variable descriptions are provided online under variable tables.
+Researchers often cited specific previous works where stimuli were
+selected from, and these references were included, which can be found in
+the downloaded data. Table \ref{tab:stim-table} is included dynamically
+online under \enquote{view the variable table}" and \enquote{view the
+frequency table}.
 
 \begin{table}[tbp]
 \begin{center}
@@ -413,26 +418,28 @@ dynamically online under \enquote{view the variable table}" and
 \toprule
 Stimuli & $N$ & Percent & Min & Max & $M$ & $SD$\\
 \midrule
-Anagrams & \ \ 6 & 0.7 & \ \ 80 & \ \ \ \  378 & \ \  229.00 & \ \ \ \ 210.72\\
-Categories & 33 & 3.9 & \ \  4 & \ \ \ \  240 & \ \ \ \ 46.32 & \ \ \ \  51.61\\
-Characters & 21 & 2.5 & \ \ 48 & \ \  80651 & \ \ 8458.37 & \ \ 19210.92\\
-Cloze/Sentences & 35 & 4.1 & \ \  5 & \ \ \ \ 1998 & \ \  353.66 & \ \ \ \ 376.01\\
-Color drawings & \ \ 9 & 1.1 & 200 & \ \ \ \  744 & \ \  384.00 & \ \ \ \ 212.79\\
-Homo/Heterographs & 11 & 1.3 & \ \ 20 & \ \ \ \  566 & \ \  165.00 & \ \ \ \ 165.38\\
-Homo/Heteronyms & \ \ 5 & 0.6 & 114 & \ \ \ \  578 & \ \  343.75 & \ \ \ \ 251.45\\
-Homo/Heterophones & \ \ 4 & 0.5 & \ \ 40 & \ \ \ \  207 & \ \  148.00 & \ \ \ \  93.66\\
-Letters & 57 & 6.7 & \ \  9 & \ \ \ \ 8836 & \ \  669.88 & \ \  1564.37\\
-Line drawings & 43 & 5.1 & \ \ 22 & \ \ \ \  520 & \ \  253.79 & \ \ \ \ 132.09\\
-Names & \ \ 8 & 0.9 & 126 & \ \  10000 & \ \ 2644.17 & \ \  4080.78\\
-Other & 84 & 9.9 & \ \  1 & \ \ \ \ 3061 & \ \  666.13 & \ \ \ \ 876.87\\
-Phonemes & \ \ 9 & 1.1 & 10000 & \ \  10000 & 10000.00 & \ \ \ \ \ \ \ \ NA\\
-Pictures & 74 & 8.7 & \ \  2 & \ \ \ \ 2941 & \ \  431.26 & \ \ \ \ 480.61\\
-Pseudowords & 15 & 1.8 & \ \ 30 & \ \  40481 & 14004.36 & \ \ 15223.04\\
-Sounds & 15 & 1.8 & \ \ 22 & \ \ \ \ 2159 & \ \  462.58 & \ \ \ \ 672.79\\
-Syllables & 11 & 1.3 & \ \ 20 & \ \ 303636 & 44868.80 & 100922.91\\
-Symbols/Icons & \ \ 9 & 1.1 & \ \ 68 & \ \ \ \  600 & \ \  294.60 & \ \ \ \ 195.07\\
-Word Pairs & 28 & 3.3 & \ \ 40 & \ \  72186 & \ \ 8076.83 & \ \ 20871.25\\
-Words & 374 & 43.9 & \ \ 10 & 33500000 & 115731.45 & 1843018.04\\
+Anagrams & \ \ 6 & 0.6 & \ \  80 & \ \ \ \ \ \ 378 & \ \ \ \  229.00 & \ \ \ \ \ \ 210.72\\
+Categories & 33 & 3.4 & \ \ \ \ 4 & \ \ \ \ \ \ 240 & \ \ \ \ \ \ 46.32 & \ \ \ \ \ \  51.61\\
+Characters & 21 & 2.1 & \ \  48 & \ \ \ \ 80651 & \ \ \ \ 8458.37 & \ \ \ \ 19210.92\\
+Cloze/Sentences & 35 & 3.6 & \ \ \ \ 5 & \ \ \ \  1998 & \ \ \ \  353.66 & \ \ \ \ \ \ 376.01\\
+Color drawings & 11 & 1.1 & \ \ 200 & \ \ \ \ \ \ 750 & \ \ \ \  406.00 & \ \ \ \ \ \ 225.00\\
+Corpus & 116 & 11.9 & 40000 & 700000000 & 72787972.48 & 155024616.77\\
+Homo/Heterographs & 11 & 1.1 & \ \  20 & \ \ \ \ \ \ 566 & \ \ \ \  165.00 & \ \ \ \ \ \ 165.38\\
+Homo/Heteronyms & \ \ 5 & 0.5 & \ \ 114 & \ \ \ \ \ \ 578 & \ \ \ \  343.75 & \ \ \ \ \ \ 251.45\\
+Homo/Heterophones & \ \ 4 & 0.4 & \ \  40 & \ \ \ \ \ \ 207 & \ \ \ \  148.00 & \ \ \ \ \ \  93.66\\
+Letters & 57 & 5.8 & \ \ \ \ 9 & \ \ \ \  8836 & \ \ \ \  669.88 & \ \ \ \  1564.37\\
+Line drawings & 44 & 4.5 & \ \  22 & \ \ \ \ \ \ 520 & \ \ \ \  253.93 & \ \ \ \ \ \ 130.51\\
+Names & \ \ 8 & 0.8 & \ \ 126 & \ \ \ \ 10000 & \ \ \ \ 2644.17 & \ \ \ \  4080.78\\
+Other & 85 & 8.7 & \ \ \ \ 1 & \ \ \ \  3061 & \ \ \ \  666.13 & \ \ \ \ \ \ 876.87\\
+Phonemes & \ \ 9 & 0.9 & 10000 & \ \ \ \ 10000 & \ \  10000.00 & \ \ \ \ \ \ \ \ \ \ NA\\
+Pictures & 74 & 7.6 & \ \ \ \ 2 & \ \ \ \  2941 & \ \ \ \  431.26 & \ \ \ \ \ \ 480.61\\
+Pseudowords & 15 & 1.5 & \ \  30 & \ \ \ \ 40481 & \ \  14004.36 & \ \ \ \ 15223.04\\
+Sentences & \ \ 7 & 0.7 & \ \ \ \ 9 & \ \ \ \ \ \ 240 & \ \ \ \  101.29 & \ \ \ \ \ \  90.46\\
+Sounds & 15 & 1.5 & \ \  22 & \ \ \ \  2159 & \ \ \ \  462.58 & \ \ \ \ \ \ 672.79\\
+Syllables & 11 & 1.1 & \ \  20 & \ \  303636 & \ \  44868.80 & \ \  100922.91\\
+Symbols/Icons & \ \ 9 & 0.9 & \ \  68 & \ \ \ \ \ \ 600 & \ \ \ \  294.60 & \ \ \ \ \ \ 195.07\\
+Word Pairs & 28 & 2.9 & \ \  40 & \ \ \ \ 72186 & \ \ \ \ 8076.83 & \ \ \ \ 20871.25\\
+Words & 374 & 38.2 & \ \  10 & 33500000 & \ \ 115731.45 & \ \ 1843018.04\\
 \bottomrule
 \end{tabular}
 }
@@ -455,7 +462,7 @@ used, which was commonly English. In order to help distinguish these
 norms, a column was added that denoted non-linguistic norms (coded as 0
 for linguistic, 1 for non-linguistic). For each language, the Glottolog
 codes were added in a separate column to help identify them
-(Hammarstrom, Forkel, \& Haspelmath, 2018). One potential limitation of
+(Hammarstrom, Forkel, \& Haspelmath, n.d.). One potential limitation of
 the LAB was that English is the first language for the authors; however,
 translation tools were used to code sources found in other languages.
 Table \ref{tab:lang-table} indicates language frequencies and
@@ -489,7 +496,7 @@ Spanish & 61 & 6.9\\
 \addlinespace
 \end{tabular}
 \begin{tablenotes}[para]
-\normalsize{\textit{Note.} Languages with less than five lines were excluded for publication space purposes.}
+\normalsize{\textit{Note.} Languages with less than five entries were excluded for publication space purposes.}
 \end{tablenotes}
 \end{threeparttable}
 \end{center}
@@ -500,7 +507,7 @@ Spanish & 61 & 6.9\\
 
 In many instances, megastudies are often named, such as the English
 Lexicon Project (Balota et al., 2007), for easier reference. This
-information was included in the in the dataset, which will also help
+information was included in the dataset, which will also help
 researchers with the stimuli references as described above. For example,
 a newer study may reference using the BOSS database (Brodeur,
 Dionne-Dostie, Montreuil, \& Lepage, 2010) and having that information
@@ -514,24 +521,25 @@ stimuli selection tool for psycholinguistic studies.
 \subsubsection{Keyword Tags}\label{keyword-tags}}
 
 Keyword tags are the majority of the database, as they allow for the
-best understanding of trends and availability of stimuli. Table
-\ref{tab:lang-table} portrays a list of tags, frequencies, percentages,
-and correlations (described below). Tag descriptions are provided online
-under variable table. Each article was coded with tags based on the
-description of the accessible data, and one article may have multiple
-tags. However, due to the cumulative nature of database research, this
-tagging system does not mean that each article collected that particular
-type of data. The most common example of this distinction occurs when
-data was combined across sources, but presented in a new article. The
-Maki, McKinley, and Thompson (2004) semantic distance norms also
-included values from the South Florida Free Association norms (Nelson,
-McEvoy, \& Schreiber, 2004), and Latent Semantic Analysis (Landauer \&
-Dumais, 1997). Therefore, this article was coded with association and
-semantics, even though the association norms were not collected in that
-paper. As described above, some small frequency tags were used because
-of the initial pass through newer articles, but these were left in the
-database because of their specificity, and they can be used in future
-additions.
+best understanding of trends and availability of stimuli. Tables
+\ref{tab:tag-table} and \ref{tab:tag-table2} portray a list of tags,
+frequencies, percentages, and correlations (described below) for tags
+with sample sizes greater than 10. Tag descriptions are provided online
+under tag table. Each article was coded with tags based on the
+description of the accessible data, and a single article may have
+multiple tags. However, due to the cumulative nature of database
+research, this tagging system does not mean that each article collected
+that particular type of data. The most common example of this
+distinction occurs when data was combined across sources, but presented
+in a new article. The Maki, McKinley, and Thompson (2004) semantic
+distance norms also included values from the South Florida Free
+Association norms (Nelson, McEvoy, \& Schreiber, 2004), and Latent
+Semantic Analysis (Landauer \& Dumais, 1997). Therefore, this article
+was coded with association and semantics, even though the association
+norms were not collected in that paper. As described above, some small
+frequency tags were used because of the initial pass through newer
+articles, but these were left in the database because of their
+specificity, and they can be used in future additions.
 
 \begin{table}[tbp]
 \begin{center}
@@ -542,20 +550,16 @@ additions.
 \toprule
 Stimuli & $N$ & Percent & $r$\\
 \midrule
-Accuracy & 10 & 0.5 & NA\\
 Age of Acquisition & 107 & 4.9 & .134\\
 Ambiguity/Word Meaning & 31 & 1.4 & -.076\\
 Arousal & 62 & 2.9 & .173\\
 Association & 86 & 4.0 & -.336\\
 Category & 48 & 2.2 & -.068\\
-Cloze Probabilities & \ \ 7 & 0.3 & NA\\
 Complexity & 22 & 1.0 & NA\\
 Concreteness & 73 & 3.4 & .001\\
 Confusion Matrices & 18 & 0.8 & NA\\
 Context & 14 & 0.6 & NA\\
-Distinctiveness & 10 & 0.5 & NA\\
 Dominance & 33 & 1.5 & .045\\
-Ease of Learning & \ \ 5 & 0.2 & NA\\
 Familiarity & 141 & 6.5 & .116\\
 Frequency & 252 & 11.6 & .005\\
 Grapheme-Phoneme Correspondence & 18 & 0.8 & NA\\
@@ -563,16 +567,14 @@ Identification & 17 & 0.8 & NA\\
 Identification - Lexical Decision & 16 & 0.7 & NA\\
 Identification - Naming & 50 & 2.3 & .098\\
 Image Agreement & 24 & 1.1 & NA\\
-Image Variability & 10 & 0.5 & NA\\
 Imageability & 95 & 4.4 & .023\\
-Intensity & \ \ 8 & 0.4 & NA\\
 Letters & 70 & 3.2 & .081\\
 \bottomrule
 \addlinespace
 \end{tabular}
 }
 \begin{tablenotes}[para]
-\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag.}
+\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag when sample size is greater than 30.}
 \end{tablenotes}
 \end{threeparttable}
 \end{center}
@@ -588,35 +590,30 @@ Letters & 70 & 3.2 & .081\\
 Stimuli & $N$ & Percent & $r$\\
 \midrule
 Meaningfulness & 48 & 2.2 & -.162\\
-Modality & \ \ 6 & 0.3 & NA\\
 Morphology & 24 & 1.1 & NA\\
 Name Agreement & 47 & 2.2 & .090\\
 Orthographic Neighborhood & 56 & 2.6 & .112\\
 Part of Speech & 67 & 3.1 & .095\\
 Phonemes & 62 & 2.9 & .126\\
 Phonological Neighborhood & 38 & 1.8 & .111\\
-Priming & \ \ 7 & 0.3 & NA\\
 Pronunciation & 16 & 0.7 & NA\\
 Response Times & 78 & 3.6 & .069\\
 Recall & 19 & 0.9 & NA\\
 Recognition & 18 & 0.8 & NA\\
-Rime & \ \ 5 & 0.2 & NA\\
 Semantics & 109 & 5.0 & .056\\
 Sensory/Motor & 39 & 1.8 & .071\\
-Sentence Completion & \ \ 6 & 0.3 & NA\\
 Similarity & 21 & 1.0 & NA\\
 Syllables & 64 & 3.0 & .148\\
 Syntax & 23 & 1.1 & NA\\
 Typicality & 25 & 1.2 & NA\\
 Valence/Emotion & 115 & 5.3 & .156\\
 Visual Complexity & 40 & 1.8 & .090\\
-Word Completion & \ \ 9 & 0.4 & NA\\
 \bottomrule
 \addlinespace
 \end{tabular}
 }
 \begin{tablenotes}[para]
-\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag.}
+\normalsize{\textit{Note.} Correlation refers to the correlation between publication year and the frequency of a given tag when sample size is greater than 30.}
 \end{tablenotes}
 \end{threeparttable}
 \end{center}
@@ -653,7 +650,7 @@ dataset.
 
 Journal results, unsurprisingly, show that the wealth of data was
 published in \emph{Behavior Research Methods} (57.6\% combined across
-name changes). However, a large number of articles also appeared in
+name changes).The next largest publishers of articles were
 \emph{Psychonomic Monograph Supplements} (2.1\%), \emph{Journal of
 Verbal Learning and Verbal Behavior} (1.7\%), \emph{Psychonomic Science}
 (1.7\%), \emph{Journal of Experimental Psychology} (combined across
@@ -661,14 +658,14 @@ subjournals, 2.5\%), \emph{Perception \& Psychophysics} (1.5\%),
 \emph{Memory \& Cognition} (1.4\%), \emph{Bulletin of the Psychonomic
 Society} (0.8\%), and \emph{Norms of Word Association} (0.9\%; Postman
 \& Keppel, 1970). The complete list can be found in the frequency
-statistics online, as there were 129 different entries for journals,
+statistics online, as there were many different entries for journals,
 books, and websites of publications. While some of these sources were
 not published with peer review, they were generally found through
-citations of other peer-reviewed work. Although \emph{Behavior Research
-Methods} has dominated the field for publications, the large array of
-options for publishing indicates a growth in the available avenues for
-researchers in this field (for example, open source journals such as
-\emph{PLoS ONE} and websites).
+citations of other peer-reviewed work or through the Language Goldmine.
+Although \emph{Behavior Research Methods} has dominated the field for
+publications, the large array of options for publishing indicates a
+growth in the available avenues for researchers in this field (for
+example, open source journals such as \emph{PLoS ONE} and websites).
 
 Figure \ref{fig:pub-fig} portrays the number of publications across
 years, and there has been a clear expansion of database and program
@@ -677,12 +674,12 @@ of publications tracks with the 1950s cognitive revolution (Miller,
 2003), but an odd decline in publications occurred from the 1970s to
 1990s. The last twenty years has shown unbelievable progress in this
 area, at over 359 publications since 2010 alone. This chart can be found
-in greater detail online, under the Papers Per Year link, showing the
-ups and downs of publications by year in a larger format with the
-ability to control year range. For example, 2004, 2010, 2013-2015, and
-2017 were big years for linguistic publications, each with 30 or more
-publications. Even with these fluctuations, a clear growth curve in
-publications can be found since the 90s.
+in greater detail online, under the Papers Per Year, showing the ups and
+downs of publications by year in a larger format with the ability to
+control year range. For example, 2004, 2008-2018 were big years for
+linguistic publications, each with 30 or more publications. Even with
+these fluctuations, a clear growth curve in publications can be found
+since the 90s.
 
 \begin{figure}
 \centering
@@ -693,40 +690,33 @@ publications can be found since the 90s.
 \hypertarget{stimuli}{%
 \subsubsection{Stimuli}\label{stimuli}}
 
-Stimuli are presented in Table \ref{tab:lang-table}, and a review of
-this table indicated that the publication of word stimuli was slightly
-under half the dataset (43.9\%), which has quite a large range of
-quantity of stimuli from only ten words to a large corpus of over 500
-million words. The wide range of data includes these corpora materials,
-but there are very large word norming projects outside of the corpora
-included in the LAB. Other types of word stimuli also appear commonly in
-the LAB data such as categories, letters, and word pairs. Because
-linguistic data was of particular interest, we selected publications
-based on words and word pairs, and plotted the number of stimuli
-presented in the paper to examine big data trends. These data were
-broken down by set size in Figure \ref{fig:word-fig}. The upper left
-hand quadrant shows all stimuli across years, and the big data
-publications stand out in the last fifteen years of publications. This
-data was then further broken down into small datasets (\textless{}1,000
-stimuli; upper right quadrant), medium datasets (1,000 - 1,000,000
-stimuli; bottom left quadrant), and large datasets (1,000,000+, lower
-right quadrant; although there is a large jump between medium and large
-as most data is either half million or less or a million or more). The
-small dataset graph shows that these publications are common across
-time, while the bottom two quadrants are more telling for the
-megastudies trend investigation. As with languages and tags (below), we
-see an increase in the number of medium and very large datasets across
-the years where the lone large dataset outlier in the early years is the
-Brown Corpus (Kučera \& Francis, 1967).
+Stimuli are presented in Table \ref{tab:stim-table}, and a review of
+this table indicated that the publication of word stimuli was the
+largest category (38.2\%), followed by corpora (11.9\%). Other types of
+word stimuli also appear commonly in the LAB data such as categories,
+letters, and word pairs. Because linguistic data was of particular
+interest, we selected publications based on words and word pairs, and
+plotted the number of stimuli presented in the paper to examine big data
+trends. These data were broken down by set size in Figure
+\ref{fig:word-fig}. The upper left hand quadrant shows all stimuli
+across years, and the big data publications stand out in the last
+fifteen years of publications. We excluded two data points that included
+over one million words to show the increase in publication of larger
+datasets across years. This data was then further broken down into
+smaller datasets (\textless{}10,000 stimuli; upper right quadrant), and
+larger datasets (10,000+ stimuli; bottom left quadrant). The smaller
+dataset graph shows that these publications are common across time,
+while the bottom quadrant was more telling for the megastudies trend
+investigation. As with languages and tags (below), we see an increase in
+the number of larger datasets across the years.
 
 \begin{figure}
 \centering
 \includegraphics{LAB_files/figure-latex/word-fig-1.pdf}
 \caption{\label{fig:word-fig}Number of word stimuli plotted across years.
-Top left quandrant includes all word stimuli. Top right quadrant
-includes word stimuli ranging up to 1000 words, bottom left quadrant
-portrays stimuli counts from 1000 to one million, and bottom right
-quadrant indicates all stimuli above one million. The x-axis is
+Top left quandrant includes all word stimuli, minus two outliers. Top
+right quadrant includes word stimuli ranging up to 10000 words, bottom
+left quadrant portrays stimuli counts exceeding 10000. The x-axis is
 consistent across graphs, however, the y-axis is scaled for the range of
 stimuli targeted in that graph.}
 \end{figure}
@@ -737,18 +727,18 @@ stimuli targeted in that graph.}
 The variety and number of languages for stimuli provided a picture of
 the growth and diversity of psycholinguistic stimuli, as seen in Table
 \ref{tab:lang-table}. A growing number of articles include non-English
-languages including Portuguese ( 2.0\%), Spanish ( 6.9\%), French (
-5.2\%), German ( 4.2\%), and even include multiple languages ( 9.7\%).
-To examine trends, the English only articles were filtered out of the
-dataset since they were the majority of publications (53.2\%) and were
-published across all years present in this data. Of the 389 non-English
-publications, 86 included multiple languages, and NA of these were
-published after 2010. Additionally, the last ten years (2008 and later)
-have seen an explosion of publications in non-English languages: 256,
-with 32 in 2017 alone. The publication of varied languages is still
-largely from WEIRD cultures (Western Educated Industrialized Rich
-Democratic; Henrich, Heine, \& Norenzayan, 2010) and Indo-European
-languages, thus, indicating room for cross linguistic improvement.
+languages including Spanish ( 6.9\%), French ( 5.2\%), German ( 4.2\%),
+and even include multiple languages ( 9.7\%). To examine trends, the
+English only articles were filtered out of the dataset since they were
+the majority of publications (53.2\%) and were published across all
+years present in this data. Of the 389 non-English publications, 86
+included multiple languages, and 45 of these were published after 2010.
+Additionally, the last ten years (2008 and later) have seen an explosion
+of publications in non-English languages: 256, with 32 in 2017 alone.
+The publication of varied languages is still largely from WEIRD cultures
+(Western Educated Industrialized Rich Democratic; Henrich, Heine, \&
+Norenzayan, 2010) and Indo-European languages, thus, indicating room for
+cross linguistic improvement.
 
 \hypertarget{tags}{%
 \subsubsection{Tags}\label{tags}}
@@ -756,19 +746,20 @@ languages, thus, indicating room for cross linguistic improvement.
 \begin{figure}
 \centering
 \includegraphics{LAB_files/figure-latex/tag-fig-1.pdf}
-\caption{\label{fig:tag-fig}Tag publication frequency across years.}
+\caption{\label{fig:tag-fig}Number of tags included in each publication
+across years.}
 \end{figure}
 
 Tables \ref{tab:tag-table} and \ref{tab:tag-table2} display the number,
-percentages, correlations of tags across year, and descriptions of tags.
-Undoubtedly, these tags represent changes in terminology over time, and
-some could be combined or recoined. However, even if low frequency
-(\emph{N} \textless{} 10; nine tags) tags were excluded, thirty-seven
-different tags were used to describe the types of psycholinguistic data.
-Many of these tags can be considered individual research areas, and the
-sizeable number of different options indicates how complex and diverse
-the field has become since the publication of free association norms in
-1910 (Kent \& Rosanoff, 1910).
+percentages, correlations of tags across year for tags with sample sizes
+greater than 10. Undoubtedly, these tags represent changes in
+terminology over time, and some could be combined or recoined. However,
+even if low frequency (\emph{N} \textless{}= 10; 11 tags in our dataset)
+tags were excluded, 38 different tags were used to describe the types of
+psycholinguistic data. Many of these tags can be considered individual
+research areas, and the sizeable number of different options indicates
+how complex and diverse the field has become since the publication of
+free association norms in 1910 (Kent \& Rosanoff, 1910).
 
 The total number of tags for each publication was then tallied, and this
 data was plotted in Figure \ref{fig:tag-fig} to visualize if the number
@@ -786,25 +777,25 @@ may be considered at once for modeling or experiment creation.
 Next, tags with at least thirty publications were investigated
 individually for trends across time (correlations presented in Tables
 \ref{tab:tag-table} and \ref{tab:tag-table2}). Individual histograms can
-be created by clicking on the Tags Per Year link online, which show the
-total frequency of the selected tag by year. Some small positive trends
-were found, such as the increase in arousal, age of acquisition,
-syllables, familiarity, and valence norms. Intriguingly, meaningfulness
-and association both showed negative correlations, but these
-correlations can be understood as an artifact of the publication of a
-book on association norms in the 1970s (Postman \& Keppel, 1970), as
-well as a recent drop off of in the small but steady use of
-meaningfulness. These small correlations may partially be explained by
-the sheer number and variation of data available in the LAB portal, as
-one would expect the number of frequency tags to increase with the
-recent SUBTLEX publications. Indeed, if the frequency tags were plotted
-by year an increase across the last decade (16 in 2010 and 2013, and 21
-in 2014) can be found. Readers are encouraged to view the individual
-graphs for tags to investigate the change of keyword publication over
-time, including the rise and demise of several research areas. For
-example, confusion matrices heyday appeared to range from the early 70s
-to the mid 80s, while arousal norms do not make a consistent appearance
-until the late 90s.
+be created by using the Tags Per Year area online, which show the total
+frequency of the selected tag by year. Some small positive trends were
+found, such as the increase in arousal, age of acquisition, syllables,
+familiarity, and valence norms. Intriguingly, meaningfulness and
+association both showed negative correlations, but these correlations
+can be understood as an artifact of the publication of a book on
+association norms in the 1970s (Postman \& Keppel, 1970), as well as a
+recent drop off of in the small but steady use of meaningfulness. These
+small correlations may partially be explained by the sheer number and
+variation of data available in the LAB portal, as one would expect the
+number of frequency tags to increase with the recent SUBTLEX
+publications. Indeed, if the frequency tags were plotted by year an
+increase across the last decade (18 in 2010, 15 in 2013, and 22 in 2014)
+can be found. Readers are encouraged to view the individual graphs for
+tags to investigate the change of keyword publication over time,
+including the rise and demise of several research areas. For example,
+confusion matrices heyday appeared to range from the early 70s to the
+mid 80s, while arousal norms do not make a consistent appearance until
+the late 90s.
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -1028,8 +1019,8 @@ studies. \emph{Behavior Research Methods}, \emph{45}(3), 765--771.
 doi:\href{https://doi.org/10.3758/s13428-012-0296-8}{10.3758/s13428-012-0296-8}
 
 \leavevmode\hypertarget{ref-Glottolog}{}%
-Hammarstrom, H., Forkel, R., \& Haspelmath, M. (2018). Glottolog 3.3.
-doi:\href{https://doi.org/10.5281/zenodo.1321024}{10.5281/zenodo.1321024}
+Hammarstrom, Forkel, \& Haspelmath. (n.d.). Glottolog 3.3. Retrieved
+from \url{https://glottolog.org/}
 
 \leavevmode\hypertarget{ref-Henrich2010}{}%
 Henrich, J., Heine, S. J., \& Norenzayan, A. (2010). The weirdest people
@@ -1123,8 +1114,8 @@ Amazon's Mechanical Turk. \emph{Behavior Research Methods},
 doi:\href{https://doi.org/10.3758/s13428-011-0124-6}{10.3758/s13428-011-0124-6}
 
 \leavevmode\hypertarget{ref-McRae1997}{}%
-McRae, K., \{de Sa\}, V. R., \& Seidenberg, M. S. (1997). On the nature
-and scope of featural representations of word meaning. \emph{Journal of
+McRae, K., Sa, V. R. de, \& Seidenberg, M. S. (1997). On the nature and
+scope of featural representations of word meaning. \emph{Journal of
 Experimental Psychology: General}, \emph{126}(2), 99--130.
 doi:\href{https://doi.org/10.1037/0096-3445.126.2.99}{10.1037/0096-3445.126.2.99}
 
